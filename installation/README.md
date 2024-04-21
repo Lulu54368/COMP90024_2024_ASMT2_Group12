@@ -10,9 +10,13 @@
 
 # Access kubernetes cluster 
 ## ssh tunnel
-chmod 600 <path-to-private-key> (e.g. ~/Downloads/mykeypair.pem)
+```shell
+chmod 600 ./test_key.pem
+```
+```shell
 ssh -i ~/test_key.pem  -L 6443:"192.168.10.12":6443 ubuntu@172.26.128.21
-openstack coe cluster config elastic
+```
+
 ```shell
 openstack coe cluster config elastic
 ```
