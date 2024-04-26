@@ -1,5 +1,8 @@
 
 # Installation
+
+## Step 1
+Download following on your local machine
 - OpenStack clients 6.3.x ([Installation instructions](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html)).
   > Note: Please ensure the following Openstack clients are installed: `python-cinderclient`, `python-keystoneclient`, `python-magnumclient`, `python-neutronclient`, `python-novaclient`, `python-octaviaclient`. See: [Install the OpenStack client](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html).
 - JQ 1.6.x ([Installation instructions](https://jqlang.github.io/jq/download/)).
@@ -8,25 +11,25 @@
 - MRC project with enough resources to create a Kubernetes cluster.
 - Connect to [Campus network](https://studentit.unimelb.edu.au/wifi-vpn#uniwireless) if on-campus or [UniMelb Student VPN](https://studentit.unimelb.edu.au/wifi-vpn#vpn) if off-campus
 
+## Step 2
+Create key pairs on your MRC dashboard and share the public key. Once the public key been added to Bastion, you can access Bastion node by your own private key.
+
 # Access kubernetes cluster 
 ## ssh tunnel
 ```shell
-chmod 600 ./test_key.pem
+chmod 600 ./{your_private_key.pem}
 ```
 ```shell
-ssh -i ~/test_key.pem  -L 6443:"192.168.10.12":6443 ubuntu@172.26.128.21
+ssh -i ~/{your_private_key.pem}  -L 6443:"192.168.10.12":6443 ubuntu@172.26.128.21
 ```
 
-```shell
-openstack coe cluster config elastic
-```
+On your local machine, run following command:
+First cd to our repository where you can see a [config](https://github.com/lollyluan/COMP90024_2024_ASMT2_Group12/blob/main/config) file. 
 
 ```shell
-awk '
-    /^    server:/ { sub(/https:\/\/[^:]+/, "https://127.0.0.1") }
-    { print }
-' config > temp && mv temp config
+mkdir -p ~/.kube
 ```
+
 ```shell
 mv config ~/.kube/config
 chmod 600 ~/.kube/config
