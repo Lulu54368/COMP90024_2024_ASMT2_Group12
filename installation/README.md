@@ -15,7 +15,8 @@ Download following on your local machine
 Create key pairs on your MRC dashboard and share the public key. Once the public key been added to Bastion, you can access Bastion node by your own private key.
 
 # Access kubernetes cluster 
-## ssh tunnel
+
+## Step 3 build ssh tunnel
 ```shell
 chmod 600 ./{your_private_key.pem}
 ```
@@ -23,8 +24,14 @@ chmod 600 ./{your_private_key.pem}
 ssh -i ~/{your_private_key.pem}  -L 6443:"192.168.10.12":6443 ubuntu@172.26.128.21
 ```
 
-On your local machine, run following command:
-First cd to our repository where you can see a [config](https://github.com/lollyluan/COMP90024_2024_ASMT2_Group12/blob/main/config) file. 
+## Step 4
+Download OpenRC Stack file from MRC dashboard. Instructions in Workshop week4-2 Page15. Once you download the file, run following command on your **local machine**, **not on Bastion node**:
+
+```shell
+source ./{<your project name>-openrc.sh}
+```
+
+Then cd to our GitHub repository where you can see a [config](https://github.com/lollyluan/COMP90024_2024_ASMT2_Group12/blob/main/config) file. 
 
 ```shell
 mkdir -p ~/.kube
