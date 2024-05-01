@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  backend:
+    image: flask_docker
+    ports:
+      - 5001:5000
+    environment:
+      - ELASTICSEARCH_URL=${ELASTICSEARCH_URL}
+      - ELASTICSEARCH_USERNAME=${ELASTICSEARCH_USERNAME}
+      - ELASTICSEARCH_PASSWORD=${ELASTICSEARCH_PASSWORD}

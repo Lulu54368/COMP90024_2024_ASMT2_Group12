@@ -1,3 +1,4 @@
 *.pem
 test_key
 .venv
+.env
