@@ -12,11 +12,14 @@ GET  /num/mastadon_toots(sentiment between -1 to 0)
 {
     "mastadon-total":800,
 }
+
 GET  /num/mastadon_toots(sentiment between 0 to 1)
 
 {
     "mastadon-total":800,
 }
+
+
 POST /mastadon_toots
 
 {
@@ -28,6 +31,7 @@ POST /mastadon_toots
     'url': ,
     'language': 
 }
+
 GET /topic/mastadon_toots
 
 {
@@ -36,13 +40,13 @@ GET /topic/mastadon_toots
 }(filter non_english)
 
 
-
 GET /sentiment/mastadon_toots (sentiment between -1 to 0)
 
 {
     "topic":  ,(only one topic)
     "num_of_toots_of_the_topic":  ,
 }
+
 GET /sentiment/mastadon_toots (sentiment between 0 to 1)
 
 {
@@ -51,12 +55,14 @@ GET /sentiment/mastadon_toots (sentiment between 0 to 1)
 }
 
 TWITTER
+
 GET /sentiment/twitter_tweets(sentiment between -1 to 0)
 
 {
     "topic":  ,(only one topic)
     "num_of_toots_of_the_topic":  ,
 }
+
 GET /sentiment/twitter_tweets(sentiment between 0 to 1)
 
 {
@@ -69,16 +75,19 @@ GET /num/twitter_tweets
 {
     "tweeter-total":800,
 }
+
 GET  /num/twitter_tweets(sentiment between -1 to 0)
 
 {
     "mastadon-total":800,
 }
+
 GET  /num/twitter_tweets(sentiment between 0 to 1)
 
 {
     "mastadon-total":800,
 }
+
 GET /topic/twitter_tweets
 
 {
