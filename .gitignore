@@ -2,3 +2,5 @@
 test_key
 .venv
 .env
+path/to/venv/
+database/path/to/venv/
