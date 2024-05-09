@@ -15,6 +15,7 @@ es_client = Elasticsearch(
     basic_auth = ("elastic","elastic"))
 
 INDEX_NAME_SUDO = "sudo"
+INDEX_NAME_BOM = "bom"
 CHUNK_SIZE = 500
 
 # Define the mappings for sudo index
@@ -69,6 +70,59 @@ def create_index_sudo():
     }
 
     response = es_client.indices.create(index=INDEX_NAME_SUDO, body=index_body)
+    return response
+
+def create_index_bom():
+    index_body = {
+        "settings" : {
+            "index": {
+                "number_of_shards": 3,
+                "number_of_replicas": 1
+            }
+        },
+        "mappings" : {
+            "properties" : {
+                "sa2_name_2016" : {
+                    "type" : "text"
+                },
+                "area_km2" : {
+                    "type" : "double"
+                },
+                "gccsa_name_2016" : {
+                    "type" : "text"
+                },
+                "state_code_2016" : {
+                    "type" : "integer"
+                },
+                "state_name_2016" : {
+                    "type" : "text"
+                },
+                "sa2_maincode_2016" : {
+                    "type" : "integer"
+                },
+                "sa4_code_2016" : {
+                    "type" : "integer"
+                },
+                "pop_density_2020_people_per_km2" : {
+                    "type" : "double"
+                },
+                "sa4_name_2016" : {
+                    "type" : "text"
+                },
+                "gccsa_code_2016" : {
+                    "type" : "text"
+                },
+                "sa3_name_2016" : {
+                    "type" : "text"
+                },
+                "sa2_maincode_2016" : {
+                    "type" : "integer"
+                }
+            }
+        }
+    }
+
+    response = es_client.indices.create(index=INDEX_NAME_BOM, body=index_body)
     return response
 
 # Upload sudo regional and population data to elasticsearch
