@@ -72,6 +72,7 @@ def create_index_sudo():
     response = es_client.indices.create(index=INDEX_NAME_SUDO, body=index_body)
     return response
 
+# Define the mappings for bom index
 def create_index_bom():
     index_body = {
         "settings" : {
@@ -82,41 +83,32 @@ def create_index_bom():
         },
         "mappings" : {
             "properties" : {
-                "sa2_name_2016" : {
-                    "type" : "text"
+                "Site" : {
+                    "type" : "integer"
                 },
-                "area_km2" : {
+                "Name" : {
+                    "type" : "string"
+                },
+                "Lat" : {
                     "type" : "double"
                 },
-                "gccsa_name_2016" : {
-                    "type" : "text"
-                },
-                "state_code_2016" : {
-                    "type" : "integer"
-                },
-                "state_name_2016" : {
-                    "type" : "text"
-                },
-                "sa2_maincode_2016" : {
-                    "type" : "integer"
-                },
-                "sa4_code_2016" : {
-                    "type" : "integer"
-                },
-                "pop_density_2020_people_per_km2" : {
+                "Lon" : {
                     "type" : "double"
                 },
-                "sa4_name_2016" : {
+                "Start" : {
                     "type" : "text"
                 },
-                "gccsa_code_2016" : {
+                "End" : {
                     "type" : "text"
                 },
-                "sa3_name_2016" : {
-                    "type" : "text"
+                "Years" : {
+                    "type" : "double"
                 },
-                "sa2_maincode_2016" : {
+                "%" : {
                     "type" : "integer"
+                },
+                "AWS" : {
+                    "type" : "text"
                 }
             }
         }
@@ -147,5 +139,28 @@ def insert_sudo_data():
             print(f"Indexed {total_index} documents so far.")
             documents = []
 
-print(create_index_sudo())
-insert_sudo_data()
+# Upload bom station data to elasticsearch
+def insert_bom_data():
+    with open("../data/BOM-Station/BOM.json", "r") as json_file:
+        json_data = json.load(json_file)
+       
+    total_index = 0
+    documents = []    
+    
+    for index, doc in enumerate(json_data):
+        # Assign a ID to each document
+        doc["_id"] = index
+        documents.append(doc)
+
+        # Sending amount of documents with CHUNK_SIZE = 500
+        if len(documents) == CHUNK_SIZE or index == len(json_data) - 1:
+            # Perform bulk indexing with the current chunk
+            bulk(es_client, documents, index=INDEX_NAME_BOM, chunk_size = CHUNK_SIZE)
+            total_index += len(documents)
+            print(f"Indexed {total_index} documents so far.")
+            documents = []
+
+# print(create_index_sudo())
+# insert_sudo_data()
+print(create_index_bom)
+insert_bom_data()
