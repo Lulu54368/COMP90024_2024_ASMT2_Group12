@@ -1,8 +1,11 @@
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 from dotenv import load_dotenv
+import urllib3
 import os
 import json
+
+urllib3.disable_warnings()
 
 # Connect to Elasticsearch using username and password
 es_client = Elasticsearch(
@@ -11,12 +14,18 @@ es_client = Elasticsearch(
     verify_certs=False,
     basic_auth = ("elastic","elastic"))
 
-INDEX_NAME = "sudo"
+INDEX_NAME_SUDO = "sudo"
 CHUNK_SIZE = 500
 
 # Define the mappings for sudo index
-def create_index():
-    mapping = {
+def create_index_sudo():
+    index_body = {
+        "settings" : {
+            "index": {
+                "number_of_shards": 3,
+                "number_of_replicas": 1
+            }
+        },
         "mappings" : {
             "properties" : {
                 "sa2_name_2016" : {
@@ -59,7 +68,7 @@ def create_index():
         }
     }
 
-    response = es_client.indices.create(index=INDEX_NAME, body=mapping)
+    response = es_client.indices.create(index=INDEX_NAME_SUDO, body=index_body)
     return response
 
 # Upload sudo regional and population data to elasticsearch
@@ -79,10 +88,10 @@ def insert_sudo_data():
         # Sending amount of documents with CHUNK_SIZE = 500
         if len(documents) == CHUNK_SIZE or index == len(json_data) - 1:
             # Perform bulk indexing with the current chunk
-            bulk(es_client, documents, index=INDEX_NAME, chunk_size = CHUNK_SIZE)
+            bulk(es_client, documents, index=INDEX_NAME_SUDO, chunk_size = CHUNK_SIZE)
             total_index += len(documents)
             print(f"Indexed {total_index} documents so far.")
             documents = []
 
-print(create_index())
+print(create_index_sudo())
 insert_sudo_data()
