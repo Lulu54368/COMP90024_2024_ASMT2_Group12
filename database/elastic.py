@@ -162,6 +162,7 @@ def create_index_twitter():
     response = es_client.indices.create(index=INDEX_NAME_TWITTER, body=index_body)
     return response
 
+# Define the mappings for mastodon index
 def create_index_mastodon():
     index_body = {
         "settings" : {
@@ -173,7 +174,7 @@ def create_index_mastodon():
         "mappings" : {
             "properties" : {
                 "id" : {
-                    "type" : "integer"
+                    "type" : "long"
                 },
                 "created_at" : {
                     "type" : "date"
@@ -236,4 +237,5 @@ def insert_data(index_name):
 # print(create_index_bom())
 # insert_data(INDEX_NAME_BOM)
 # print(create_index_twitter())
-insert_data(INDEX_NAME_TWITTER)
+# insert_data(INDEX_NAME_TWITTER)
+print(create_index_mastodon())
