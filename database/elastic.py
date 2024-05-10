@@ -152,8 +152,9 @@ def create_index_twitter():
                 "coordinates" : {
                     "type" : "double"
                 },
-                "topic" : {
-                    "type" : "text"
+                "topics" : {
+                    "type" : "text",
+                    "fielddata" : True
                 }
             }
         }
@@ -186,7 +187,8 @@ def create_index_mastodon():
                     "type" : "double"
                 },
                 "topics" : {
-                    "type" : "text"
+                    "type" : "text",
+                    "fielddata" : True
                 },
                 "url" : {
                     "type" : "text"
@@ -237,5 +239,5 @@ def insert_data(index_name):
 # print(create_index_bom())
 # insert_data(INDEX_NAME_BOM)
 # print(create_index_twitter())
-# insert_data(INDEX_NAME_TWITTER)
-print(create_index_mastodon())
+insert_data(INDEX_NAME_TWITTER)
+# print(create_index_mastodon())

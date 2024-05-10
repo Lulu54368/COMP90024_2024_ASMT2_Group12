@@ -6,11 +6,10 @@ with open('./final.json', 'r') as json_file:
 data = []
 
 for tweet in json_data:
-    for topic in tweet.get('topics', []):
-        new_tweet = tweet.copy()
-        new_tweet['topic'] = topic
-        del new_tweet['topics']
-        data.append(new_tweet)
+    separator = '_&_'
+    if isinstance(tweet['topics'], list):
+        tweet['topics'] = separator.join(tweet['topics'])
+    data.append(tweet)
 
 with open('tweet.json', 'w') as jsonfile:
     json.dump(data, jsonfile)
