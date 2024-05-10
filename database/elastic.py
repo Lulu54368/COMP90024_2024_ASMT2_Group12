@@ -19,6 +19,10 @@ INDEX_NAME_BOM = "bom"
 INDEX_NAME_TWITTER = "twitter"
 CHUNK_SIZE = 500
 
+file_path_dict = {INDEX_NAME_SUDO : "../data/SUDO-ABS-PopulationDensity/sudo_region.json",
+                   INDEX_NAME_BOM : "../data/BOM-Station/BOM.json",
+                   INDEX_NAME_TWITTER : "../data/twitter/tweet.json"}
+
 # Define the mappings for sudo index
 def create_index_sudo():
     index_body = {
@@ -157,10 +161,10 @@ def create_index_twitter():
     response = es_client.indices.create(index=INDEX_NAME_TWITTER, body=index_body)
     return response
 
-# Upload sudo regional and population data to elasticsearch
-def insert_sudo_data():
-    # Open json and load
-    with open("../data/SUDO-ABS-PopulationDensity/sudo_region.json", "r") as json_file:
+# Upload the data with passing index name
+def insert_data(index_name):
+     # Open json file and load data
+    with open(file_path_dict[index_name], "r") as json_file:
         json_data = json.load(json_file)
        
     total_index = 0
@@ -174,63 +178,14 @@ def insert_sudo_data():
         # Sending amount of documents with CHUNK_SIZE = 500
         if len(documents) == CHUNK_SIZE or index == len(json_data) - 1:
             # Perform bulk indexing with the current chunk
-            bulk(es_client, documents, index=INDEX_NAME_SUDO, chunk_size = CHUNK_SIZE)
+            bulk(es_client, documents, index=index_name, chunk_size = CHUNK_SIZE)
             total_index += len(documents)
             print(f"Indexed {total_index} documents so far.")
             documents = []
-
-# Upload bom station data to elasticsearch
-def insert_bom_data():
-    with open("../data/BOM-Station/BOM.json", "r") as json_file:
-        json_data = json.load(json_file)
-       
-    total_index = 0
-    documents = []    
-    
-    for index, doc in enumerate(json_data):
-        # Assign a ID to each document
-        doc["_id"] = index
-        documents.append(doc)
-
-        # Sending amount of documents with CHUNK_SIZE = 500
-        if len(documents) == CHUNK_SIZE or index == len(json_data) - 1:
-            # Perform bulk indexing with the current chunk
-            bulk(es_client, documents, index=INDEX_NAME_BOM, chunk_size = CHUNK_SIZE)
-            total_index += len(documents)
-            print(f"Indexed {total_index} documents so far.")
-            documents = []
-
-def insert_twitter_data():
-    with open("../data/twitter/final.json", "r") as json_file:
-        json_data = json.load(json_file)
-       
-    total_index = 0
-    documents = []    
-    
-    for index, doc in enumerate(json_data):
-        base_id = doc['id']
-        for topic_index, topic in enumerate(doc.get('topics', [])):
-            # Create a new document for each topic
-            topic_doc = doc.copy()
-            topic_doc['topic'] = topic
-            del topic_doc['topics']
-            
-            # Assign a unique ID to each document
-            topic_doc['_id'] = f"{base_id}-{topic_index}"
-            documents.append(topic_doc)
-            
-
-            # Sending amount of documents with CHUNK_SIZE = 500
-            if len(documents) == CHUNK_SIZE or index == len(json_data) - 1:
-                # Perform bulk indexing with the current chunk
-                bulk(es_client, documents, index=INDEX_NAME_TWITTER, chunk_size = CHUNK_SIZE)
-                total_index += len(documents)
-                print(f"Indexed {total_index} documents so far.")
-                documents = []
 
 # print(create_index_sudo())
-# insert_sudo_data()
 # print(create_index_bom())
-# insert_bom_data()
-print(create_index_twitter())
-insert_twitter_data
+# print(create_index_twitter())
+# insert_data(INDEX_NAME_SUDO)
+# insert_data(INDEX_NAME_BOM)
+# insert_data(INDEX_NAME_TWITTER)
