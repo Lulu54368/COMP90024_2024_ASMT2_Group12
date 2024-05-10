@@ -17,6 +17,7 @@ es_client = Elasticsearch(
 INDEX_NAME_SUDO = "sudo"
 INDEX_NAME_BOM = "bom"
 INDEX_NAME_TWITTER = "twitter"
+INDEX_NAME_MASTODON = "mastodon"
 CHUNK_SIZE = 500
 
 file_path_dict = {INDEX_NAME_SUDO : "../data/SUDO-ABS-PopulationDensity/sudo_region.json",
@@ -92,7 +93,7 @@ def create_index_bom():
                     "type" : "integer"
                 },
                 "Name" : {
-                    "type" : "string"
+                    "type" : "text"
                 },
                 "Lat" : {
                     "type" : "double"
@@ -134,7 +135,7 @@ def create_index_twitter():
         "mappings" : {
             "properties" : {
                 "id" : {
-                    "type" : "integer"
+                    "type" : "long"
                 },
                 "created_at" : {
                     "type" : "date"
@@ -161,6 +162,44 @@ def create_index_twitter():
     response = es_client.indices.create(index=INDEX_NAME_TWITTER, body=index_body)
     return response
 
+def create_index_mastodon():
+    index_body = {
+        "settings" : {
+            "index": {
+                "number_of_shards": 3,
+                "number_of_replicas": 1
+            }
+        },
+        "mappings" : {
+            "properties" : {
+                "id" : {
+                    "type" : "integer"
+                },
+                "created_at" : {
+                    "type" : "date"
+                },
+                "content" : {
+                    "type" : "text"
+                },
+                "sentiment_score" : {
+                    "type" : "double"
+                },
+                "topics" : {
+                    "type" : "text"
+                },
+                "url" : {
+                    "type" : "text"
+                },
+                "language" : {
+                    "type" : "text"
+                }
+            }
+        }
+    }
+
+    response = es_client.indices.create(index=INDEX_NAME_MASTODON, body=index_body)
+    return response
+
 # Upload the data with passing index name
 def insert_data(index_name):
      # Open json file and load data
@@ -178,14 +217,23 @@ def insert_data(index_name):
         # Sending amount of documents with CHUNK_SIZE = 500
         if len(documents) == CHUNK_SIZE or index == len(json_data) - 1:
             # Perform bulk indexing with the current chunk
-            bulk(es_client, documents, index=index_name, chunk_size = CHUNK_SIZE)
+            try:
+                success, failed = bulk(es_client, documents, index=index_name, raise_on_error=False)
+                print(f"Successfully indexed {success} documents.")
+                if failed:
+                    print("Failed to index documents:")
+                    for error in failed:
+                        print(error)
+            except Exception as e:
+                print(f"An unexpected error occurred: {str(e)}")
+
             total_index += len(documents)
             print(f"Indexed {total_index} documents so far.")
             documents = []
 
 # print(create_index_sudo())
-# print(create_index_bom())
-# print(create_index_twitter())
 # insert_data(INDEX_NAME_SUDO)
+# print(create_index_bom())
 # insert_data(INDEX_NAME_BOM)
-# insert_data(INDEX_NAME_TWITTER)
+# print(create_index_twitter())
+insert_data(INDEX_NAME_TWITTER)
