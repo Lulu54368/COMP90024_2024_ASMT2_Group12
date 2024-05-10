@@ -2,3 +2,6 @@
 test_key
 .venv
 .env
+path/to/venv/
+database/path/to/venv/
+data/Mastodon/__pycache__/mastodon.cpython-312.pyc
