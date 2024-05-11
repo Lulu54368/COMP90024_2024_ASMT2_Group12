@@ -59,4 +59,68 @@ GET twitter/_search
 }
 ```
 
+## mastadon
+### total number
+```
+GET mastodon/_count/
+```
+
+### The total number of instances (sentiment < 0)
+```
+GET mastodon/_search
+{
+   "query": {
+    "bool": {
+      "filter": {
+        "range": {
+          "sentiment_score": {
+            "lt": 0
+          }
+        }
+      }
+    }
+  },
+  "_source": "topics",
+  "aggs": {
+    "topics_count": {
+      "terms": {
+        "field": "topics",
+        "size": 1000 
+      }
+    }
+  }
+}
+```
+
+### The total number of instances (sentiment > 0)
+```
+GET mastodon/_search
+{
+   "query": {
+    "bool": {
+      "filter": {
+        "range": {
+          "sentiment_score": {
+            "gt": 0
+          }
+        }
+      }
+    }
+  },
+  "_source": "topics",
+  "aggs": {
+    "topics_count": {
+      "terms": {
+        "field": "topics",
+        "size": 1000 
+      }
+    }
+  }
+}
+```
+
+
+
+
+
 
