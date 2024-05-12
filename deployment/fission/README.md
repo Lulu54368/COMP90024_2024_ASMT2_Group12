@@ -120,6 +120,17 @@ GET mastodon/_search
 ```
 
 
+# Fission function
+
+```
+kubectl apply -f deployment/fission/shared-data.yaml
+fission function create --name mastodon --env python --code deployment/fission/mastodon.py
+fission route create  --url /mastodon/gt --function mastodon --name mastodon-gt --createingress
+fission function create --spec --name mastodon --env python --code ./health.py --configmap shared-data
+fission function create --spec --name mastodon-count --env python --entrypoint "health.count"  --configmap shared-data
+```
+
+
 
 
 
