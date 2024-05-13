@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "lga11_chronicdisease_modelledestimate.10050",
+    "area_code": 10050,
+    "area_name": "Albury (C)",
+    "asthma_me_2_rate_3_11_7_13": 12.5427780279566,
+    "respirtry_me_2_rate_3_11_7_13": 31.8384205338813,
+    "coordinates": {
+      "latitude": -36.0804766,
+      "longitude": 146.9162795
+    },
+    "SA2_NAME21": "Albury - South"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.10300",
+    "area_code": 10300,
+    "area_name": "Balranald (A)",
+    "asthma_me_2_rate_3_11_7_13": 11.3852293073574,
+    "respirtry_me_2_rate_3_11_7_13": 31.2450804237213,
+    "coordinates": {
+      "latitude": -34.640863,
+      "longitude": 143.5657748
+    },
+    "SA2_NAME21": "Wentworth-Balranald Region"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.10550",
+    "area_code": 10550,
+    "area_name": "Bega Valley (A)",
+    "asthma_me_2_rate_3_11_7_13": 11.8591473494005,
+    "respirtry_me_2_rate_3_11_7_13": 29.1577860110593,
+    "coordinates": {
+      "latitude": -36.8164249,
+      "longitude": 149.7118548319042
+    },
+    "SA2_NAME21": "Bega-Eden Hinterland"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.10650",
+    "area_code": 10650,
+    "area_name": "Berrigan (A)",
+    "asthma_me_2_rate_3_11_7_13": 12.0033643152578,
+    "respirtry_me_2_rate_3_11_7_13": 28.1322559551754,
+    "coordinates": {
+      "latitude": -35.75148165,
+      "longitude": 145.6601212644043
+    },
+    "SA2_NAME21": "Tocumwal - Finley - Jerilderie"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.11050",
+    "area_code": 11050,
+    "area_name": "Boorowa (A)",
+    "asthma_me_2_rate_3_11_7_13": 11.7530008304796,
+    "respirtry_me_2_rate_3_11_7_13": 32.9473776259297,
+    "coordinates": {
+      "latitude": -34.4385643,
+      "longitude": 148.7188286
+    },
+    "SA2_NAME21": "Young Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.11860",
+    "area_code": 11860,
+    "area_name": "Conargo (A)",
+    "asthma_me_2_rate_3_11_7_13": 10.2896941329833,
+    "respirtry_me_2_rate_3_11_7_13": 27.410862664405,
+    "coordinates": {
+      "latitude": -35.3029173,
+      "longitude": 145.1814533
+    },
+    "SA2_NAME21": "Deniliquin Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.12000",
+    "area_code": 12000,
+    "area_name": "Coolamon (A)",
+    "asthma_me_2_rate_3_11_7_13": 11.0918101112285,
+    "respirtry_me_2_rate_3_11_7_13": 31.3655420846391,
+    "coordinates": {
+      "latitude": -34.5997239,
+      "longitude": 147.11712212858282
+    },
+    "SA2_NAME21": "Wagga Wagga Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.12050",
+    "area_code": 12050,
+    "area_name": "Cooma-Monaro (A)",
+    "asthma_me_2_rate_3_11_7_13": 11.6572920165553,
+    "respirtry_me_2_rate_3_11_7_13": 30.9681252931693,
+    "coordinates": {
+      "latitude": -36.23563,
+      "longitude": 149.1264221
+    },
+    "SA2_NAME21": "Cooma"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.12200",
+    "area_code": 12200,
+    "area_name": "Cootamundra (A)",
+    "asthma_me_2_rate_3_11_7_13": 12.1650734011245,
+    "respirtry_me_2_rate_3_11_7_13": 32.913992987616,
+    "coordinates": {
+      "latitude": -34.6394513,
+      "longitude": 148.025723
+    },
+    "SA2_NAME21": "Cootamundra"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.12300",
+    "area_code": 12300,
+    "area_name": "Corowa Shire (A)",
+    "asthma_me_2_rate_3_11_7_13": 12.0033643152578,
+    "respirtry_me_2_rate_3_11_7_13": 28.1322559551754,
+    "coordinates": {
+      "latitude": -35.9880917,
+      "longitude": 146.3648021
+    },
+    "SA2_NAME21": "Corowa"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.12500",
+    "area_code": 12500,
+    "area_name": "Deniliquin (A)",
+    "asthma_me_2_rate_3_11_7_13": 12.9674851950266,
+    "respirtry_me_2_rate_3_11_7_13": 28.5827330113713,
+    "coordinates": {
+      "latitude": -35.5302183,
+      "longitude": 144.9597178
+    },
+    "SA2_NAME21": "Deniliquin"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.12750",
+    "area_code": 12750,
+    "area_name": "Eurobodalla (A)",
+    "asthma_me_2_rate_3_11_7_13": 12.0627725655767,
+    "respirtry_me_2_rate_3_11_7_13": 28.4532328248293,
+    "coordinates": {
+      "latitude": -35.93293665,
+      "longitude": 149.9244006590627
+    },
+    "SA2_NAME21": "Deua - Wadbilliga"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.13310",
+    "area_code": 13310,
+    "area_name": "Goulburn Mulwaree (A)",
+    "asthma_me_2_rate_3_11_7_13": 12.8744634685527,
+    "respirtry_me_2_rate_3_11_7_13": 32.7017502272473,
+    "coordinates": {
+      "latitude": -34.900896700000004,
+      "longitude": 149.80172138261196
+    },
+    "SA2_NAME21": "Goulburn Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.13340",
+    "area_code": 13340,
+    "area_name": "Greater Hume Shire (A)",
+    "asthma_me_2_rate_3_11_7_13": 11.9539790952511,
+    "respirtry_me_2_rate_3_11_7_13": 32.2449284073861,
+    "coordinates": {
+      "latitude": -35.7071009,
+      "longitude": 147.30675053025647
+    },
+    "SA2_NAME21": "Albury Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.13450",
+    "area_code": 13450,
+    "area_name": "Griffith (C)",
+    "asthma_me_2_rate_3_11_7_13": 11.1267982901292,
+    "respirtry_me_2_rate_3_11_7_13": 29.684129277548,
+    "coordinates": {
+      "latitude": -34.334545000000006,
+      "longitude": 146.00810414248107
+    },
+    "SA2_NAME21": "Griffith Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.13500",
+    "area_code": 13500,
+    "area_name": "Gundagai (A)",
+    "asthma_me_2_rate_3_11_7_13": 12.1650734011245,
+    "respirtry_me_2_rate_3_11_7_13": 32.913992987616,
+    "coordinates": {
+      "latitude": -35.0614045,
+      "longitude": 148.1059794
+    },
+    "SA2_NAME21": "Gundagai"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.13850",
+    "area_code": 13850,
+    "area_name": "Hay (A)",
+    "asthma_me_2_rate_3_11_7_13": 11.3852293073574,
+    "respirtry_me_2_rate_3_11_7_13": 31.2450804237213,
+    "coordinates": {
+      "latitude": -34.5092589,
+      "longitude": 144.842485
+    },
+    "SA2_NAME21": "Hay"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.14250",
+    "area_code": 14250,
+    "area_name": "Jerilderie (A)",
+    "asthma_me_2_rate_3_11_7_13": 11.6712643216306,
+    "respirtry_me_2_rate_3_11_7_13": 28.6290731333645,
+    "coordinates": {
+      "latitude": -35.3596404,
+      "longitude": 145.7347999
+    },
+    "SA2_NAME21": "Tocumwal - Finley - Jerilderie"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.14300",
+    "area_code": 14300,
+    "area_name": "Junee (A)",
+    "asthma_me_2_rate_3_11_7_13": 12.1518683057281,
+    "respirtry_me_2_rate_3_11_7_13": 32.8950325925884,
+    "coordinates": {
+      "latitude": -34.81502565,
+      "longitude": 147.6726749913009
+    },
+    "SA2_NAME21": "Junee"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.14750",
+    "area_code": 14750,
+    "area_name": "Leeton (A)",
+    "asthma_me_2_rate_3_11_7_13": 11.481510187649,
+    "respirtry_me_2_rate_3_11_7_13": 31.2483658392216,
+    "coordinates": {
+      "latitude": -34.52975335,
+      "longitude": 146.29325801998567
+    },
+    "SA2_NAME21": "Griffith Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.15550",
+    "area_code": 15550,
+    "area_name": "Murrumbidgee (A)",
+    "asthma_me_2_rate_3_11_7_13": 10.1361083938087,
+    "respirtry_me_2_rate_3_11_7_13": 30.9332797938776,
+    "coordinates": {
+      "latitude": -35.0141713,
+      "longitude": 145.8110414878139
+    },
+    "SA2_NAME21": "Tocumwal - Finley - Jerilderie"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.15800",
+    "area_code": 15800,
+    "area_name": "Narrandera (A)",
+    "asthma_me_2_rate_3_11_7_13": 11.6121812834734,
+    "respirtry_me_2_rate_3_11_7_13": 31.2791571532494,
+    "coordinates": {
+      "latitude": -34.5926463,
+      "longitude": 146.70004383390253
+    },
+    "SA2_NAME21": "Narrandera"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.16180",
+    "area_code": 16180,
+    "area_name": "Palerang (A)",
+    "asthma_me_2_rate_3_11_7_13": 9.7943060655901,
+    "respirtry_me_2_rate_3_11_7_13": 27.7102028830521,
+    "coordinates": {
+      "latitude": -35.4232,
+      "longitude": 149.5685
+    },
+    "SA2_NAME21": "Queanbeyan Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.16470",
+    "area_code": 16470,
+    "area_name": "Queanbeyan (C)",
+    "asthma_me_2_rate_3_11_7_13": 9.74400373527431,
+    "respirtry_me_2_rate_3_11_7_13": 27.0522161007275,
+    "coordinates": {
+      "latitude": -35.3524518,
+      "longitude": 149.2337634
+    },
+    "SA2_NAME21": "Queanbeyan"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.17050",
+    "area_code": 17050,
+    "area_name": "Snowy River (A)",
+    "asthma_me_2_rate_3_11_7_13": 9.80027261205779,
+    "respirtry_me_2_rate_3_11_7_13": 29.8083293144227,
+    "coordinates": {
+      "latitude": -36.8983828,
+      "longitude": 148.4290749
+    },
+    "SA2_NAME21": "Orbost"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.17350",
+    "area_code": 17350,
+    "area_name": "Temora (A)",
+    "asthma_me_2_rate_3_11_7_13": 12.1650734011244,
+    "respirtry_me_2_rate_3_11_7_13": 32.913992987616,
+    "coordinates": {
+      "latitude": -34.3830356,
+      "longitude": 147.46858599208093
+    },
+    "SA2_NAME21": "Temora"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.17450",
+    "area_code": 17450,
+    "area_name": "Tumbarumba (A)",
+    "asthma_me_2_rate_3_11_7_13": 10.9666872928273,
+    "respirtry_me_2_rate_3_11_7_13": 28.0595433654678,
+    "coordinates": {
+      "latitude": -35.7764898,
+      "longitude": 148.010062
+    },
+    "SA2_NAME21": "Tumbarumba"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.17500",
+    "area_code": 17500,
+    "area_name": "Tumut Shire (A)",
+    "asthma_me_2_rate_3_11_7_13": 12.1628887750283,
+    "respirtry_me_2_rate_3_11_7_13": 29.1207528086875,
+    "coordinates": {
+      "latitude": -35.3012389,
+      "longitude": 148.22017164848518
+    },
+    "SA2_NAME21": "Tumut"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.17640",
+    "area_code": 17640,
+    "area_name": "Upper Lachlan Shire (A)",
+    "asthma_me_2_rate_3_11_7_13": 10.1572775395453,
+    "respirtry_me_2_rate_3_11_7_13": 31.4861572336929,
+    "coordinates": {
+      "latitude": -34.4046892,
+      "longitude": 149.819121
+    },
+    "SA2_NAME21": "Goulburn Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.17700",
+    "area_code": 17700,
+    "area_name": "Urana (A)",
+    "asthma_me_2_rate_3_11_7_13": 11.9365550997839,
+    "respirtry_me_2_rate_3_11_7_13": 28.6939828921098,
+    "coordinates": {
+      "latitude": -35.3316667,
+      "longitude": 146.2677778
+    },
+    "SA2_NAME21": "Corowa Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.17750",
+    "area_code": 17750,
+    "area_name": "Wagga Wagga (C)",
+    "asthma_me_2_rate_3_11_7_13": 12.7144842387304,
+    "respirtry_me_2_rate_3_11_7_13": 31.897193751301,
+    "coordinates": {
+      "latitude": -35.115,
+      "longitude": 147.3677778
+    },
+    "SA2_NAME21": "Wagga Wagga - West"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.17800",
+    "area_code": 17800,
+    "area_name": "Wakool (A)",
+    "asthma_me_2_rate_3_11_7_13": 10.4372682243461,
+    "respirtry_me_2_rate_3_11_7_13": 27.9262832198127,
+    "coordinates": {
+      "latitude": -35.4693908,
+      "longitude": 144.3968297
+    },
+    "SA2_NAME21": "Deniliquin Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.18710",
+    "area_code": 18710,
+    "area_name": "Yass Valley (A)",
+    "asthma_me_2_rate_3_11_7_13": 9.91711159229313,
+    "respirtry_me_2_rate_3_11_7_13": 31.6576132890312,
+    "coordinates": {
+      "latitude": -34.9265413,
+      "longitude": 148.94127362958625
+    },
+    "SA2_NAME21": "Yass Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.20570",
+    "area_code": 20570,
+    "area_name": "Ballarat (C)",
+    "asthma_me_2_rate_3_11_7_13": 15.1469191704113,
+    "respirtry_me_2_rate_3_11_7_13": 35.6691543509679,
+    "coordinates": {
+      "latitude": -37.5623013,
+      "longitude": 143.8605645
+    },
+    "SA2_NAME21": "Ballarat"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.20660",
+    "area_code": 20660,
+    "area_name": "Banyule (C)",
+    "asthma_me_2_rate_3_11_7_13": 11.4112106480675,
+    "respirtry_me_2_rate_3_11_7_13": 33.1287187429134,
+    "coordinates": {
+      "latitude": -37.734063,
+      "longitude": 145.0866520306644
+    },
+    "SA2_NAME21": "Viewbank - Yallambie"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.20740",
+    "area_code": 20740,
+    "area_name": "Bass Coast (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.6115813201464,
+    "respirtry_me_2_rate_3_11_7_13": 30.029334713622,
+    "coordinates": {
+      "latitude": -38.4861595,
+      "longitude": 145.55422005393342
+    },
+    "SA2_NAME21": "Wonthaggi - Inverloch"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.20830",
+    "area_code": 20830,
+    "area_name": "Baw Baw (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.3221963300765,
+    "respirtry_me_2_rate_3_11_7_13": 29.7169323035944,
+    "coordinates": {
+      "latitude": -34.7316667,
+      "longitude": 149.6344444
+    },
+    "SA2_NAME21": "Goulburn Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.21010",
+    "area_code": 21010,
+    "area_name": "Benalla (RC)",
+    "asthma_me_2_rate_3_11_7_13": 14.1107327227663,
+    "respirtry_me_2_rate_3_11_7_13": 31.2955755659699,
+    "coordinates": {
+      "latitude": -36.5517611,
+      "longitude": 145.9833562
+    },
+    "SA2_NAME21": "Benalla"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.21110",
+    "area_code": 21110,
+    "area_name": "Boroondara (C)",
+    "asthma_me_2_rate_3_11_7_13": 9.45614860154232,
+    "respirtry_me_2_rate_3_11_7_13": 29.4756928181062,
+    "coordinates": {
+      "latitude": -37.826496,
+      "longitude": 145.0612023919295
+    },
+    "SA2_NAME21": "Camberwell"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.21180",
+    "area_code": 21180,
+    "area_name": "Brimbank (C)",
+    "asthma_me_2_rate_3_11_7_13": 8.39618271016507,
+    "respirtry_me_2_rate_3_11_7_13": 24.4812042604525,
+    "coordinates": {
+      "latitude": -37.742717,
+      "longitude": 144.80542675475374
+    },
+    "SA2_NAME21": "St Albans - North"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.21270",
+    "area_code": 21270,
+    "area_name": "Buloke (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.776186304944,
+    "respirtry_me_2_rate_3_11_7_13": 32.2018100388649,
+    "coordinates": {
+      "latitude": -35.844697,
+      "longitude": 142.99267044936505
+    },
+    "SA2_NAME21": "Buloke"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.21450",
+    "area_code": 21450,
+    "area_name": "Cardinia (S)",
+    "asthma_me_2_rate_3_11_7_13": 12.9837654629585,
+    "respirtry_me_2_rate_3_11_7_13": 29.7331854920456,
+    "coordinates": {
+      "latitude": -38.1436364,
+      "longitude": 145.4178196
+    },
+    "SA2_NAME21": "Koo Wee Rup"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.21670",
+    "area_code": 21670,
+    "area_name": "Central Goldfields (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.4400847521984,
+    "respirtry_me_2_rate_3_11_7_13": 30.5101799389118,
+    "coordinates": {
+      "latitude": -36.978918,
+      "longitude": 143.7060232817073
+    },
+    "SA2_NAME21": "Maryborough Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.21750",
+    "area_code": 21750,
+    "area_name": "Colac-Otway (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.5967201864259,
+    "respirtry_me_2_rate_3_11_7_13": 34.7980388481971,
+    "coordinates": {
+      "latitude": -38.342402199999995,
+      "longitude": 143.5849156382198
+    },
+    "SA2_NAME21": "Colac"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.21830",
+    "area_code": 21830,
+    "area_name": "Corangamite (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.21153417873,
+    "respirtry_me_2_rate_3_11_7_13": 35.1707462395792,
+    "coordinates": {
+      "latitude": -38.21597,
+      "longitude": 143.12736889404903
+    },
+    "SA2_NAME21": "Camperdown"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.21890",
+    "area_code": 21890,
+    "area_name": "Darebin (C)",
+    "asthma_me_2_rate_3_11_7_13": 9.71609066893599,
+    "respirtry_me_2_rate_3_11_7_13": 28.8485234923355,
+    "coordinates": {
+      "latitude": -37.7747529,
+      "longitude": 145.0386786
+    },
+    "SA2_NAME21": "Ivanhoe"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.22110",
+    "area_code": 22110,
+    "area_name": "East Gippsland (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.550860689728,
+    "respirtry_me_2_rate_3_11_7_13": 30.5629438233013,
+    "coordinates": {
+      "latitude": -37.3466413,
+      "longitude": 148.50799176001902
+    },
+    "SA2_NAME21": "Orbost"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.22170",
+    "area_code": 22170,
+    "area_name": "Frankston (C)",
+    "asthma_me_2_rate_3_11_7_13": 11.5989790864348,
+    "respirtry_me_2_rate_3_11_7_13": 33.3942438847137,
+    "coordinates": {
+      "latitude": -38.1444729,
+      "longitude": 145.1268808
+    },
+    "SA2_NAME21": "Frankston"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.22250",
+    "area_code": 22250,
+    "area_name": "Gannawarra (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.7758222891955,
+    "respirtry_me_2_rate_3_11_7_13": 32.2004992556658,
+    "coordinates": {
+      "latitude": -35.7169085,
+      "longitude": 144.14603632589694
+    },
+    "SA2_NAME21": "Gannawarra"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.22620",
+    "area_code": 22620,
+    "area_name": "Greater Bendigo (C)",
+    "asthma_me_2_rate_3_11_7_13": 14.7445272275129,
+    "respirtry_me_2_rate_3_11_7_13": 34.7365301669964,
+    "coordinates": {
+      "latitude": -36.791344550000005,
+      "longitude": 144.3159188939216
+    },
+    "SA2_NAME21": "Strathfieldsaye"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.22670",
+    "area_code": 22670,
+    "area_name": "Greater Dandenong (C)",
+    "asthma_me_2_rate_3_11_7_13": 8.01153745412685,
+    "respirtry_me_2_rate_3_11_7_13": 27.7440899147839,
+    "coordinates": {
+      "latitude": -38.0012145,
+      "longitude": 145.187055
+    },
+    "SA2_NAME21": "Keysborough - South"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.22750",
+    "area_code": 22750,
+    "area_name": "Greater Geelong (C)",
+    "asthma_me_2_rate_3_11_7_13": 12.5367430328315,
+    "respirtry_me_2_rate_3_11_7_13": 30.2771376127853,
+    "coordinates": {
+      "latitude": -38.1493248,
+      "longitude": 144.3598241
+    },
+    "SA2_NAME21": "Geelong"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.22830",
+    "area_code": 22830,
+    "area_name": "Greater Shepparton (C)",
+    "asthma_me_2_rate_3_11_7_13": 13.2646852379826,
+    "respirtry_me_2_rate_3_11_7_13": 32.9917431125285,
+    "coordinates": {
+      "latitude": -36.381072,
+      "longitude": 145.3993172
+    },
+    "SA2_NAME21": "Shepparton - North"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.23110",
+    "area_code": 23110,
+    "area_name": "Hobsons Bay (C)",
+    "asthma_me_2_rate_3_11_7_13": 10.2301644528514,
+    "respirtry_me_2_rate_3_11_7_13": 30.9511001499259,
+    "coordinates": {
+      "latitude": -37.8533828,
+      "longitude": 144.923322
+    },
+    "SA2_NAME21": "Port Melbourne Industrial"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.24130",
+    "area_code": 24130,
+    "area_name": "Macedon Ranges (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.0833297750767,
+    "respirtry_me_2_rate_3_11_7_13": 30.5040994077213,
+    "coordinates": {
+      "latitude": -37.3336305,
+      "longitude": 144.63464116524977
+    },
+    "SA2_NAME21": "Woodend"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.22310",
+    "area_code": 22310,
+    "area_name": "Glen Eira (C)",
+    "asthma_me_2_rate_3_11_7_13": 9.31406974215331,
+    "respirtry_me_2_rate_3_11_7_13": 27.8079674206238,
+    "coordinates": {
+      "latitude": -37.89914,
+      "longitude": 145.04103330198274
+    },
+    "SA2_NAME21": "Ormond - Glen Huntly"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.24330",
+    "area_code": 24330,
+    "area_name": "Maribyrnong (C)",
+    "asthma_me_2_rate_3_11_7_13": 8.87921043707647,
+    "respirtry_me_2_rate_3_11_7_13": 25.2027521685779,
+    "coordinates": {
+      "latitude": -37.7695144,
+      "longitude": 144.8902049
+    },
+    "SA2_NAME21": "Maribyrnong"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.24410",
+    "area_code": 24410,
+    "area_name": "Maroondah (C)",
+    "asthma_me_2_rate_3_11_7_13": 11.5144381320014,
+    "respirtry_me_2_rate_3_11_7_13": 34.0098778446919,
+    "coordinates": {
+      "latitude": -37.804655,
+      "longitude": 145.26116068746444
+    },
+    "SA2_NAME21": "Ringwood East"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.24600",
+    "area_code": 24600,
+    "area_name": "Melbourne (C)",
+    "asthma_me_2_rate_3_11_7_13": 7.77844940983837,
+    "respirtry_me_2_rate_3_11_7_13": 25.5240154277564,
+    "coordinates": {
+      "latitude": -37.8142454,
+      "longitude": 144.9631732
+    },
+    "SA2_NAME21": "Melbourne CBD - East"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.24780",
+    "area_code": 24780,
+    "area_name": "Mildura (RC)",
+    "asthma_me_2_rate_3_11_7_13": 13.94336612881,
+    "respirtry_me_2_rate_3_11_7_13": 30.6030931413389,
+    "coordinates": {
+      "latitude": -34.195274,
+      "longitude": 142.1503146
+    },
+    "SA2_NAME21": "Mildura - North"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.24970",
+    "area_code": 24970,
+    "area_name": "Monash (C)",
+    "asthma_me_2_rate_3_11_7_13": 8.89983412408464,
+    "respirtry_me_2_rate_3_11_7_13": 30.7014867171583,
+    "coordinates": {
+      "latitude": -35.4157378,
+      "longitude": 149.0906903
+    },
+    "SA2_NAME21": "Monash"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.25150",
+    "area_code": 25150,
+    "area_name": "Moorabool (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.0714527791154,
+    "respirtry_me_2_rate_3_11_7_13": 29.9668154265792,
+    "coordinates": {
+      "latitude": -38.0666588,
+      "longitude": 144.2925356
+    },
+    "SA2_NAME21": "Corio - Lovely Banks"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.25250",
+    "area_code": 25250,
+    "area_name": "Moreland (C)",
+    "asthma_me_2_rate_3_11_7_13": 9.43024173156759,
+    "respirtry_me_2_rate_3_11_7_13": 28.9031871765479,
+    "coordinates": {
+      "latitude": -37.75434655,
+      "longitude": 144.96184162599172
+    },
+    "SA2_NAME21": "Coburg - West"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.25340",
+    "area_code": 25340,
+    "area_name": "Mornington Peninsula (S)",
+    "asthma_me_2_rate_3_11_7_13": 12.1181815023258,
+    "respirtry_me_2_rate_3_11_7_13": 30.7899430161802,
+    "coordinates": {
+      "latitude": -38.3312575,
+      "longitude": 145.08106868543985
+    },
+    "SA2_NAME21": "Flinders"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.25620",
+    "area_code": 25620,
+    "area_name": "Murrindindi (S)",
+    "asthma_me_2_rate_3_11_7_13": 12.4971469241178,
+    "respirtry_me_2_rate_3_11_7_13": 30.2704988750209,
+    "coordinates": {
+      "latitude": -37.369336000000004,
+      "longitude": 145.58227012238598
+    },
+    "SA2_NAME21": "Yea"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.25710",
+    "area_code": 25710,
+    "area_name": "Nillumbik (S)",
+    "asthma_me_2_rate_3_11_7_13": 11.8342753260937,
+    "respirtry_me_2_rate_3_11_7_13": 30.702858770578,
+    "coordinates": {
+      "latitude": -37.6889274,
+      "longitude": 145.10839643183888
+    },
+    "SA2_NAME21": "Plenty - Yarrambat"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.25810",
+    "area_code": 25810,
+    "area_name": "Northern Grampians (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.9560777165491,
+    "respirtry_me_2_rate_3_11_7_13": 30.8277390881178,
+    "coordinates": {
+      "latitude": -36.849523,
+      "longitude": 143.02269025170943
+    },
+    "SA2_NAME21": "St Arnaud"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.25900",
+    "area_code": 25900,
+    "area_name": "Port Phillip (C)",
+    "asthma_me_2_rate_3_11_7_13": 9.23768916322719,
+    "respirtry_me_2_rate_3_11_7_13": 28.1666389560363,
+    "coordinates": {
+      "latitude": -38.10464825,
+      "longitude": 144.77985468846867
+    },
+    "SA2_NAME21": "Portarlington"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.26170",
+    "area_code": 26170,
+    "area_name": "South Gippsland (S)",
+    "asthma_me_2_rate_3_11_7_13": 12.6521733705974,
+    "respirtry_me_2_rate_3_11_7_13": 29.6584291636848,
+    "coordinates": {
+      "latitude": -38.54536765,
+      "longitude": 146.37318139554043
+    },
+    "SA2_NAME21": "Yarram"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.26260",
+    "area_code": 26260,
+    "area_name": "Southern Grampians (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.5975411448922,
+    "respirtry_me_2_rate_3_11_7_13": 31.088681390351,
+    "coordinates": {
+      "latitude": -37.530315,
+      "longitude": 141.9580390865912
+    },
+    "SA2_NAME21": "Southern Grampians"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.26350",
+    "area_code": 26350,
+    "area_name": "Stonnington (C)",
+    "asthma_me_2_rate_3_11_7_13": 8.81475277418459,
+    "respirtry_me_2_rate_3_11_7_13": 28.384211373333,
+    "coordinates": {
+      "latitude": -37.861363,
+      "longitude": 145.03911395392606
+    },
+    "SA2_NAME21": "Malvern - Glen Iris"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.26430",
+    "area_code": 26430,
+    "area_name": "Strathbogie (S)",
+    "asthma_me_2_rate_3_11_7_13": 13.0057840204167,
+    "respirtry_me_2_rate_3_11_7_13": 30.5925332698953,
+    "coordinates": {
+      "latitude": -36.8564674,
+      "longitude": 145.73589
+    },
+    "SA2_NAME21": "Euroa"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.26490",
+    "area_code": 26490,
+    "area_name": "Surf Coast (S)",
+    "asthma_me_2_rate_3_11_7_13": 12.0145831762475,
+    "respirtry_me_2_rate_3_11_7_13": 30.3377636795973,
+    "coordinates": {
+      "latitude": -38.339968999999996,
+      "longitude": 144.09735099186418
+    },
+    "SA2_NAME21": "Lorne - Anglesea"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.26610",
+    "area_code": 26610,
+    "area_name": "Swan Hill (RC)",
+    "asthma_me_2_rate_3_11_7_13": 12.8655145791866,
+    "respirtry_me_2_rate_3_11_7_13": 29.4934710900845,
+    "coordinates": {
+      "latitude": -35.3390784,
+      "longitude": 143.5588436
+    },
+    "SA2_NAME21": "Swan Hill"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.26670",
+    "area_code": 26670,
+    "area_name": "Towong (S)",
+    "asthma_me_2_rate_3_11_7_13": 12.7184541704161,
+    "respirtry_me_2_rate_3_11_7_13": 34.3893706935874,
+    "coordinates": {
+      "latitude": -36.1269001,
+      "longitude": 147.9879493
+    },
+    "SA2_NAME21": "Towong"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.26700",
+    "area_code": 26700,
+    "area_name": "Wangaratta (RC)",
+    "asthma_me_2_rate_3_11_7_13": 13.8621660342065,
+    "respirtry_me_2_rate_3_11_7_13": 31.6077438956225,
+    "coordinates": {
+      "latitude": -36.356434,
+      "longitude": 146.3228311
+    },
+    "SA2_NAME21": "Wangaratta"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.26730",
+    "area_code": 26730,
+    "area_name": "Warrnambool (C)",
+    "asthma_me_2_rate_3_11_7_13": 15.1650908406447,
+    "respirtry_me_2_rate_3_11_7_13": 36.7320867041547,
+    "coordinates": {
+      "latitude": -38.3826241,
+      "longitude": 142.4814191
+    },
+    "SA2_NAME21": "Warrnambool - South"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.26890",
+    "area_code": 26890,
+    "area_name": "West Wimmera (S)",
+    "asthma_me_2_rate_3_11_7_13": 12.676256954779,
+    "respirtry_me_2_rate_3_11_7_13": 29.9276612252891,
+    "coordinates": {
+      "latitude": -36.57850695,
+      "longitude": 141.4011819511553
+    },
+    "SA2_NAME21": "West Wimmera"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.27070",
+    "area_code": 27070,
+    "area_name": "Whittlesea (C)",
+    "asthma_me_2_rate_3_11_7_13": 9.77550085388877,
+    "respirtry_me_2_rate_3_11_7_13": 26.470359771787,
+    "coordinates": {
+      "latitude": -37.5121301,
+      "longitude": 145.1177321
+    },
+    "SA2_NAME21": "Whittlesea"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.27170",
+    "area_code": 27170,
+    "area_name": "Wodonga (RC)",
+    "asthma_me_2_rate_3_11_7_13": 15.2953971934256,
+    "respirtry_me_2_rate_3_11_7_13": 35.6182790190049,
+    "coordinates": {
+      "latitude": -36.1205539,
+      "longitude": 146.8880837
+    },
+    "SA2_NAME21": "Wodonga"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.27350",
+    "area_code": 27350,
+    "area_name": "Yarra (C)",
+    "asthma_me_2_rate_3_11_7_13": 9.52441629875477,
+    "respirtry_me_2_rate_3_11_7_13": 28.3797976220132,
+    "coordinates": {
+      "latitude": -34.8152,
+      "longitude": 149.6346
+    },
+    "SA2_NAME21": "Goulburn Surrounds"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.27450",
+    "area_code": 27450,
+    "area_name": "Yarra Ranges (S)",
+    "asthma_me_2_rate_3_11_7_13": 11.829751332603,
+    "respirtry_me_2_rate_3_11_7_13": 30.2810690497568,
+    "coordinates": {
+      "latitude": -37.7500105,
+      "longitude": 145.72395637113937
+    },
+    "SA2_NAME21": "Yarra Valley"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.27630",
+    "area_code": 27630,
+    "area_name": "Yarriambiack (S)",
+    "asthma_me_2_rate_3_11_7_13": 12.6781046308853,
+    "respirtry_me_2_rate_3_11_7_13": 29.9311511375646,
+    "coordinates": {
+      "latitude": -36.0284095,
+      "longitude": 142.38846769658159
+    },
+    "SA2_NAME21": "Yarriambiack"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.35250",
+    "area_code": 35250,
+    "area_name": "Mornington (S)",
+    "asthma_me_2_rate_3_11_7_13": NaN,
+    "respirtry_me_2_rate_3_11_7_13": NaN,
+    "coordinates": {
+      "latitude": -38.243314999999996,
+      "longitude": 145.08854316331724
+    },
+    "SA2_NAME21": "Somerville"
+  },
+  {
+    "id": "lga11_chronicdisease_modelledestimate.74500",
+    "area_code": 74500,
+    "area_name": "Victoria-Daly (S)",
+    "asthma_me_2_rate_3_11_7_13": NaN,
+    "respirtry_me_2_rate_3_11_7_13": NaN,
+    "coordinates": {
+      "latitude": -38.530445,
+      "longitude": 145.601706
+    },
+    "SA2_NAME21": "Wonthaggi - Inverloch"
+  }
+]
