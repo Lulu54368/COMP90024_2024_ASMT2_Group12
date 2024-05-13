@@ -3,6 +3,10 @@ import requests, logging
 import json
 from string import Template
 
+def config(k):
+    with open(f'/configs/default/shared-data/{k}', 'r') as f:
+        return f.read()
+
 def main():
     url = "https://elasticsearch-master.elastic.svc.cluster.local:9200/sudo/_search"
     payload = json.dumps({
@@ -24,7 +28,8 @@ def main():
     }
 
     current_app.logger.info(f'Received request: {request.headers}')
-    r = requests.get(url, headers=headers, data=payload, verify=False, auth=('elastic', 'elastic'))
+    r = requests.get(url, headers=headers, data=payload, verify=False, 
+    auth=(config('ES_USERNAME'), config('ES_PASSWORD')))
     current_app.logger.info(f'Status ES request: {r.status_code}')
 
     if r.status_code == 200:
