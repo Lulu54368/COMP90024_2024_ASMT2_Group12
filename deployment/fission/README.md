@@ -123,11 +123,24 @@ GET mastodon/_search
 # Fission function
 
 ```
-kubectl apply -f deployment/fission/shared-data.yaml
-fission function create --name mastodon --env python --code deployment/fission/mastodon.py
-fission route create  --url /mastodon/gt --function mastodon --name mastodon-gt --createingress
-fission function create --spec --name mastodon --env python --code ./health.py --configmap shared-data
-fission function create --spec --name mastodon-count --env python --entrypoint "health.count"  --configmap shared-data
+cd fission
+kubectl apply -f ./specs/shared-data.yaml
+kubectl apply -f ./specs/mastodon-data.yaml
+kubectl apply -f ./specs/twitter-data.yaml
+
+fission function create --name mastodon-count --env python --code ./function/mastodon_count.py --configmap shared-data --configmap 
+mastodon-data
+fission function create --name twitter-count --env python --code ./function/twitter_count.py --configmap shared-data --configmap twitter-data
+fission function create --name twitter-gt --env python --code ./function/twitter_gt.py --configmap shared-data --configmap twitter-data
+fission function create --name twitter-lt --env python --code ./function/twitter_lt.py --configmap shared-data --configmap twitter-data
+
+fission route create  --url /mastodon/gt --function mastodon-gt --name mastodon-gt --createingress
+fission route create  --url /mastodon/lt --function mastodon-lt --name mastodon-lt --createingress
+fission route create  --url /mastodon/count --function mastodon-count --name mastodon-count --createingress
+fission route create  --url /twitter/count --function twitter-count --name twitter-count --createingress
+fission route create  --url /twitter/lt --function twitter-lt --name twitter-lt --createingress
+fission route create  --url /twitter/gt --function twitter-gt --name twitter-gt --createingress
+kubectl port-forward service/router -n fission 9090:80
 ```
 
 
