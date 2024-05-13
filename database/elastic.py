@@ -1,6 +1,6 @@
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import urllib3
 import os
 import json
@@ -18,11 +18,13 @@ INDEX_NAME_SUDO = "sudo"
 INDEX_NAME_BOM = "bom"
 INDEX_NAME_TWITTER = "twitter"
 INDEX_NAME_MASTODON = "mastodon"
-CHUNK_SIZE = 500
+INDEX_NAME_MAPS = "maps"
+CHUNK_SIZE = 50
 
 file_path_dict = {INDEX_NAME_SUDO : "../data/SUDO-ABS-PopulationDensity/sudo_region.json",
                    INDEX_NAME_BOM : "../data/BOM-Station/BOM.json",
-                   INDEX_NAME_TWITTER : "../data/twitter/tweet.json"}
+                   INDEX_NAME_TWITTER : "../data/twitter/tweet.json",
+                   INDEX_NAME_MAPS : "../data/SA2-Map/map_data.geojson"}
 
 # Define the mappings for sudo index
 def create_index_sudo():
@@ -95,6 +97,9 @@ def create_index_bom():
                 "Name" : {
                     "type" : "text"
                 },
+                "Location" : {
+                    "type" : "geo_point"
+                },
                 "Lat" : {
                     "type" : "double"
                 },
@@ -102,10 +107,12 @@ def create_index_bom():
                     "type" : "double"
                 },
                 "Start" : {
-                    "type" : "text"
+                    "type" : "date",
+                    "format" : "yyyy-MM"
                 },
                 "End" : {
-                    "type" : "text"
+                    "type" : "date",
+                    "format" : "yyyy-MM"
                 },
                 "Years" : {
                     "type" : "double"
@@ -203,6 +210,38 @@ def create_index_mastodon():
     response = es_client.indices.create(index=INDEX_NAME_MASTODON, body=index_body)
     return response
 
+def create_index_maps():
+    index_body = {
+        "settings" : {
+            "index": {
+                "number_of_shards": 3,
+                "number_of_replicas": 1
+            }
+        },
+        "mappings" : {
+            "properties" : {
+                "SA2_CODE21" : {
+                    "type" : "long"
+                },
+                "SA2_NAME21" : {
+                    "type" : "text"
+                },
+                "STE_CODE21" : {
+                    "type" : "integer"
+                },
+                "STE_NAME21" : {
+                    "type" : "text"
+                },
+                "geometry" : {
+                    "type" : "geo_shape"
+                }
+            }
+        }
+    }
+
+    response = es_client.indices.create(index=INDEX_NAME_MAPS, body=index_body)
+    return response
+
 # Upload the data with passing index name
 def insert_data(index_name):
      # Open json file and load data
@@ -239,5 +278,7 @@ def insert_data(index_name):
 # print(create_index_bom())
 # insert_data(INDEX_NAME_BOM)
 # print(create_index_twitter())
-insert_data(INDEX_NAME_TWITTER)
+# insert_data(INDEX_NAME_TWITTER)
 # print(create_index_mastodon())
+# print(create_index_maps())
+insert_data(INDEX_NAME_MAPS)
