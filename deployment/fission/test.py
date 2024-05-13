@@ -1,7 +1,11 @@
-def search():
+from flask import request, current_app
+import requests, logging
+from utils import *
 
-    response = requests.get(SEARCH_ENDPOINT, auth=auth, verify=False)
-    if response.status_code == 200:
-            return jsonify(response.json())
-    else:
-        return jsonify({'error': f'Failed to fetch data from Elasticsearch. Status code: {response.status_code}'}), response.status_code
+def main():
+    current_app.logger.info(f'Received request: ${request.headers}')
+    r = requests.get('https://elasticsearch-master.elastic.svc.cluster.local:9200/mastodon/_count/',
+        verify=False,
+        auth=('elastic', 'elastic'))
+    current_app.logger.info(f'Status ES request: {r.status_code}')
+    return r.json()
