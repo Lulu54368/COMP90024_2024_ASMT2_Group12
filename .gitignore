@@ -7,3 +7,4 @@ database/path/to/venv/
 data/Mastodon/__pycache__/mastodon.cpython-312.pyc
 .DS_Store
 data/.DS_Store
+*./__pycache__/

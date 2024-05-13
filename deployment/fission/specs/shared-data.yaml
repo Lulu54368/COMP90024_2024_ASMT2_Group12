@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: default
+  name: shared-data
+data:
+  ES_USERNAME: elastic
+  ES_PASSWORD: elastic
+  HEADERS: '{
+    "kbn-xsrf": "reporting",
+    "Content-Type": "application/json"
+    }' 
+  HEALTH_URL: 'https://elasticsearch-master.elastic.svc.cluster.local/_cluster/health'
+
+
+
+    
