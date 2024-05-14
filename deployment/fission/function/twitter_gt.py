@@ -16,4 +16,4 @@ def main():
         auth=(config('ES_USERNAME'), config('ES_PASSWORD')),
         json=req_body)
     current_app.logger.info(f'Status ES request: {r.status_code}')
-    return r.json()["aggregations"]["split_values"]
+    return r.json()["aggregations"]
