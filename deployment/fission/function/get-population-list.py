@@ -27,6 +27,7 @@ def main():
         'Content-Type': 'application/json'
     }
 
+
     current_app.logger.info(f'Received request: {request.headers}')
     r = requests.get(url, headers=headers, data=payload, verify=False, 
     auth=(config('ES_USERNAME'), config('ES_PASSWORD')))
