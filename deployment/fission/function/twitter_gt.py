@@ -10,9 +10,10 @@ def config_twitter(k):
         return f.read()
 def main():
     current_app.logger.info(f'Received request: ${request.headers}')
+    req_body= json.loads(config_twitter('TWITTER_REQ_BODY_GT'))
     r = requests.get(config_twitter('TWITTER_URL'),
         verify=False,
         auth=(config('ES_USERNAME'), config('ES_PASSWORD')),
-        json= json.loads(config_twitter('TWITTER_REQ_BODY_GT')))
+        json=req_body)
     current_app.logger.info(f'Status ES request: {r.status_code}')
-    return r.json()
+    return r.json()["aggregations"]["split_values"]

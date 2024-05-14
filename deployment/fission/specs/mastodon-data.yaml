@@ -8,6 +8,7 @@ data:
     MASTODON_COUNT_URL: 'https://elasticsearch-master.elastic.svc.cluster.local:9200/mastodon/_count'
     MASTODON_REQ_BODY_LT:  '{
       "size" : 0,
+      "track_total_hits": -1,
       "query": {
           "bool": {
               "filter": {
@@ -31,6 +32,7 @@ data:
 
     MASTODON_REQ_BODY_GT:  '{
       "size" : 0,
+      "track_total_hits": -1,
       "query": {
           "bool": {
               "filter": {
