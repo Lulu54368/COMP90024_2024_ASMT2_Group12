@@ -53,3 +53,22 @@ data:
           }
         }
       }
+    
+    TWITTER_REQ_BODY_AVG_SENTIMENT: |
+      {
+        "size": 0,
+        "aggs": {
+          "regions": {
+            "terms": {
+              "field": "geo"
+            },
+            "aggs": {
+              "avg_sentiment": {
+                "avg": {
+                  "field": "sentiment"
+                }
+              }
+            }
+          }
+        }
+      }
