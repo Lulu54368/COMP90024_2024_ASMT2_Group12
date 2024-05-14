@@ -8,6 +8,7 @@ data:
     TWITTER_COUNT_URL: 'https://elasticsearch-master.elastic.svc.cluster.local:9200/twitter/_count/'
     TWITTER_REQ_BODY_LT: |
       {
+        "size" : 0,
         "query": {
           "bool": {
             "filter": {
@@ -32,6 +33,7 @@ data:
 
     TWITTER_REQ_BODY_GT: |
       {
+        "size" : 0,
         "query": {
           "bool": {
             "filter": {
