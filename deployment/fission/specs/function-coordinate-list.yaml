@@ -1,0 +1,185 @@
+include:
+- ./function/coordinate-list.py
+kind: ArchiveUploadSpec
+name: function-coordinate-list-py-V3Cu
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: coordinate-list-f4f72a2a-9cf7-4135-89cb-54fb21c96476
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://function-coordinate-list-py-V3Cu
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-13T20:24:24Z"
+
+---
+apiVersion: fission.io/v1
+kind: Function
+metadata:
+  creationTimestamp: null
+  name: coordinate-list
+spec:
+  InvokeStrategy:
+    ExecutionStrategy:
+      ExecutorType: poolmgr
+      MaxScale: 0
+      MinScale: 0
+      SpecializationTimeout: 120
+      TargetCPUPercent: 0
+    StrategyType: execution
+  concurrency: 500
+  configmaps:
+  - name: shared-data
+    namespace: ""
+  environment:
+    name: python
+    namespace: ""
+  functionTimeout: 60
+  idletimeout: 120
+  package:
+    packageref:
+      name: coordinate-list-f4f72a2a-9cf7-4135-89cb-54fb21c96476
+      namespace: ""
+  requestsPerPod: 1
+  resources: {}
+
+---
+include:
+- ./function/coordinate-list.py
+kind: ArchiveUploadSpec
+name: function-coordinate-list-py-tXdu
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: coordinate-list-0298ce8e-25a4-41cb-a99b-eb29c1e31863
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://function-coordinate-list-py-tXdu
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-13T20:29:05Z"
+
+---
+include:
+- ./function/coordinate-list.py
+kind: ArchiveUploadSpec
+name: function-coordinate-list-py-CCQ3
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: coordinate-list-03a23cc5-feb4-43f4-8b51-8591279f8844
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://function-coordinate-list-py-CCQ3
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-13T20:29:25Z"
+
+---
+include:
+- ./function/coordinate-list.py
+kind: ArchiveUploadSpec
+name: function-coordinate-list-py-8E7i
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: coordinate-list-00eff728-92e9-45d7-96a5-bef9324078b4
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://function-coordinate-list-py-8E7i
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-13T20:32:12Z"
+
+---
+include:
+- ./function/coordinate-list.py
+kind: ArchiveUploadSpec
+name: function-coordinate-list-py-bcO7
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: coordinate-list-d2cda08e-e974-438a-8983-5001038c338e
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://function-coordinate-list-py-bcO7
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-13T20:36:54Z"
+
+---
+include:
+- ./function/coordinate-list.py
+kind: ArchiveUploadSpec
+name: function-coordinate-list-py-bnwF
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: coordinate-list-46dc17de-2b74-4031-b1ba-c6ecbf99924e
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://function-coordinate-list-py-bnwF
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-13T20:39:58Z"
