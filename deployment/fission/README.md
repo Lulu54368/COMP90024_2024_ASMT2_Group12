@@ -168,6 +168,13 @@ kubectl port-forward service/router -n fission 9090:80
 http://127.0.0.1:9090/twitter/count //count tweet number
 http://127.0.0.1:9090/twitter/gt //aggregate the topic for the sentiment number > 0
 http://127.0.0.1:9090/twitter/lt  //aggregate the topic for the sentiment number < 0
+http://127.0.0.1:9090/twitter/sentiment //get the sentiment average score by area
+
+http://127.0.0.1:9090/mastodon/count //count the mastodon number
+http://127.0.0.1:9090/mastodon/gt //aggregate the topic for the sentiment number > 0
+http://127.0.0.1:9090/mastodon/lt //aggregate the topic for the sentiment number <> 0
+```
+
 
 
 
