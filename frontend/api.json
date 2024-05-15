@@ -1,4 +1,4 @@
-http://127.0.0.1:9090/twitter/gt
+//http://127.0.0.1:9090/twitter/gt
 {
     "business": 1744,
     "daily_life": 9884,
@@ -10,7 +10,7 @@ http://127.0.0.1:9090/twitter/gt
     "video": 1307
 }
 
-http://127.0.0.1:9090/twitter/lt
+//http://127.0.0.1:9090/twitter/lt
 {
     "business": 1744,
     "daily_life": 9884,
@@ -22,7 +22,7 @@ http://127.0.0.1:9090/twitter/lt
     "video": 1307
 }
 
-http://127.0.0.1:9090/mastodon/lt
+//http://127.0.0.1:9090/mastodon/lt
 {
     "arts": 3,
     "business": 5,
@@ -47,7 +47,7 @@ http://127.0.0.1:9090/mastodon/lt
     "video": 10
 }
 
-http://127.0.0.1:9090/mastodon/gt
+//http://127.0.0.1:9090/mastodon/gt
 {
     "adventure": 6,
     "arts": 8,
