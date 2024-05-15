@@ -130,8 +130,7 @@ kubectl apply -f ./specs/twitter-data.yaml
 
 fission function create --name mastodon-count --env python --code ./function/mastodon_count.py --configmap shared-data --configmap 
 mastodon-data
-fission function create --name mastodon-gt --env python --code ./function/mastodon_gt.py --configmap shared-data --configmap 
-mastodon-data
+fission function create --name mastodon-gt --env python --code ./function/mastodon_gt.py --configmap shared-data --configmap mastodon-data
 fission function create --name mastodon-lt --env python --code ./function/mastodon_lt.py --configmap shared-data --configmap mastodon-data
 fission function create --name twitter-count --env python --code ./function/twitter_count.py --configmap shared-data --configmap twitter-data
 fission function create --name twitter-gt --env python --code ./function/twitter_gt.py --configmap shared-data --configmap twitter-data

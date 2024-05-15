@@ -25,7 +25,8 @@ data:
         "aggs": {
           "split_values": {
             "terms": {
-              "field": "topics"
+              "field": "topics",
+              "order": { "_value": "desc" }
             }
           }
         }
