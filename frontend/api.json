@@ -1,0 +1,82 @@
+http://127.0.0.1:9090/twitter/gt
+{
+    "business": 1744,
+    "daily_life": 9884,
+    "diaries": 9645,   
+    "film_tv": 1246,
+    "news": 9122,
+    "social_concern": 8221,
+    "sports": 2868,
+    "video": 1307
+}
+
+http://127.0.0.1:9090/twitter/lt
+{
+    "business": 1744,
+    "daily_life": 9884,
+    "diaries": 9645,
+    "film_tv": 1246,
+    "news": 9122,
+    "social_concern": 8221,
+    "sports": 2868,
+    "video": 1307
+}
+
+http://127.0.0.1:9090/mastodon/lt
+{
+    "arts": 3,
+    "business": 5,
+    "celebrity": 4,
+    "culture": 3,
+    "daily_life": 7,
+    "diaries": 7,
+    "educational": 1,
+    "entrepreneurs": 5,
+    "film_tv": 10,
+    "fitness": 2,
+    "gaming": 6,
+    "health": 2,
+    "learning": 1,
+    "music": 3,
+    "news": 68,
+    "pop_culture": 4,
+    "science": 15,
+    "social_concern": 68,
+    "sports": 7,
+    "technology": 15,
+    "video": 10
+}
+
+http://127.0.0.1:9090/mastodon/gt
+{
+    "adventure": 6,
+    "arts": 8,
+    "business": 14,
+    "celebrity": 4,
+    "culture": 8,
+    "daily_life": 19,
+    "diaries": 19,
+    "dining": 4,
+    "educational": 5,
+    "entrepreneurs": 14,
+    "fashion": 1,
+    "film_tv": 11,
+    "fitness": 10,
+    "food": 4,
+    "gaming": 4,
+    "health": 10,
+    "learning": 5,
+    "music": 3,
+    "news": 60,
+    "pop_culture": 4,
+    "relationships": 1,
+    "science": 28,
+    "social_concern": 60,
+    "sports": 15,
+    "student_life": 1,
+    "style": 1,
+    "technology": 28,
+    "travel": 6,
+    "video": 11,
+    "youth": 1
+}

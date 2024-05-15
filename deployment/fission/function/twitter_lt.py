@@ -15,6 +15,7 @@ def main():
         verify=False,
         auth=(config('ES_USERNAME'), config('ES_PASSWORD')),
         json= json.loads(config_twitter('TWITTER_REQ_BODY_LT')))
+
     buckets = r.json()['aggregations']["split_values"]['buckets']
     aggregated_data = defaultdict(int)
     # Modify the "key" values using map and lambda
