@@ -19,10 +19,10 @@ INDEX_NAME_BOM = "bom"
 INDEX_NAME_TWITTER = "twitter"
 INDEX_NAME_MASTODON = "mastodon"
 INDEX_NAME_MAPS = "maps"
-CHUNK_SIZE = 50
+CHUNK_SIZE = 500
 
 file_path_dict = {INDEX_NAME_SUDO : "../data/SUDO-ABS-PopulationDensity/sudo_region.json",
-                   INDEX_NAME_BOM : "../data/BOM-Station/BOM.json",
+                   INDEX_NAME_BOM : "../data/BOM-Station/suburb_centre_bom.json",
                    INDEX_NAME_TWITTER : "../data/twitter/tweet.json",
                    INDEX_NAME_MAPS : "../data/SA2-Map/map_data.geojson"}
 
@@ -95,16 +95,10 @@ def create_index_bom():
                     "type" : "integer"
                 },
                 "Name" : {
-                    "type" : "text"
+                    "type" : "keyword"
                 },
                 "Location" : {
                     "type" : "geo_point"
-                },
-                "Lat" : {
-                    "type" : "double"
-                },
-                "Lon" : {
-                    "type" : "double"
                 },
                 "Start" : {
                     "type" : "date",
@@ -121,6 +115,12 @@ def create_index_bom():
                     "type" : "integer"
                 },
                 "AWS" : {
+                    "type" : "text"
+                },
+                "SA2_NAME21" : {
+                    "type" : "keyword"
+                },
+                "state" : {
                     "type" : "text"
                 }
             }
@@ -276,9 +276,9 @@ def insert_data(index_name):
 # print(create_index_sudo())
 # insert_data(INDEX_NAME_SUDO)
 # print(create_index_bom())
-# insert_data(INDEX_NAME_BOM)
+insert_data(INDEX_NAME_BOM)
 # print(create_index_twitter())
 # insert_data(INDEX_NAME_TWITTER)
 # print(create_index_mastodon())
 # print(create_index_maps())
-insert_data(INDEX_NAME_MAPS)
+# insert_data(INDEX_NAME_MAPS)
