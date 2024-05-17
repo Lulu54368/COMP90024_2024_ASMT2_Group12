@@ -3,30 +3,38 @@ import requests, logging
 import json
 from calendar import monthrange
 
+def config(k):
+    with open(f'/configs/default/shared-data/{k}', 'r') as f:
+        return f.read()
 
 def main():
     url = "https://elasticsearch-master.elastic.svc.cluster.local:9200/bom/_search"
     payload = json.dumps({
         "query": {
-          "bool": {
-           "must": [
+         "bool": {
+             "must": [
              {
-              "range": {
-              "Start": {
-                "lte": "2021-01"
+                  "range": {
+                    "Start": {
+                   "lte": "2021-01"
+                 }
                 }
-               }
-              },
-              {
-                "range": {
-                  "End": {
-                    "gte": "2022-12"
-                }
-            }
-            }
-        ]
-        }
-    },
+             },
+             {
+                  "range": {
+                   "End": {
+                   "gte": "2022-12"
+                  }
+                 }
+                },
+             {
+                  "match": {
+                   "state": "Victoria"
+                 }
+             }
+            ]
+         }
+        },
     "_source": ["Site",  "Start", "End", "Location.lat", "Location.lon"]
     })
     
@@ -35,7 +43,8 @@ def main():
     }
 
     current_app.logger.info(f'Received request: {request.headers}')
-    r = requests.get(url, headers=headers, data=payload, verify=False, auth=('elastic', 'elastic'))
+    r = requests.get(url, headers=headers, data=payload, verify=False, 
+    auth=(config('ES_USERNAME'), config('ES_PASSWORD')))
     current_app.logger.info(f'Status ES request: {r.status_code}')
 
     if r.status_code == 200:

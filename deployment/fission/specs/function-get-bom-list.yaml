@@ -1,0 +1,78 @@
+include:
+- ./function/get-bom-list.py
+kind: ArchiveUploadSpec
+name: function-get-bom-list-py-idqn
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: get-bom-list-8d19802f-80db-4305-b655-00c74b109075
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://function-get-bom-list-py-idqn
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-17T13:00:16Z"
+
+---
+apiVersion: fission.io/v1
+kind: Function
+metadata:
+  creationTimestamp: null
+  name: get-bom-list
+spec:
+  InvokeStrategy:
+    ExecutionStrategy:
+      ExecutorType: poolmgr
+      MaxScale: 0
+      MinScale: 0
+      SpecializationTimeout: 120
+      TargetCPUPercent: 0
+    StrategyType: execution
+  concurrency: 500
+  environment:
+    name: python
+    namespace: ""
+  functionTimeout: 60
+  idletimeout: 120
+  package:
+    packageref:
+      name: get-bom-list-8d19802f-80db-4305-b655-00c74b109075
+      namespace: ""
+  requestsPerPod: 1
+  resources: {}
+
+---
+include:
+- ./function/get-bom-list.py
+kind: ArchiveUploadSpec
+name: function-get-bom-list-py-p3CI
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: get-bom-list-bc41b6a0-764b-46c8-82a0-075e756491b3
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://function-get-bom-list-py-p3CI
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-17T13:01:47Z"

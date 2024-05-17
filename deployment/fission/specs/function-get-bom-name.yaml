@@ -1,0 +1,52 @@
+include:
+- ./function/get-bom-name.py
+kind: ArchiveUploadSpec
+name: function-get-bom-name-py-tiPX
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: get-bom-name-9e04eb81-13ae-40e6-861a-f6067c8f25ef
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://function-get-bom-name-py-tiPX
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-17T13:47:23Z"
+
+---
+apiVersion: fission.io/v1
+kind: Function
+metadata:
+  creationTimestamp: null
+  name: get-bom-name
+spec:
+  InvokeStrategy:
+    ExecutionStrategy:
+      ExecutorType: poolmgr
+      MaxScale: 0
+      MinScale: 0
+      SpecializationTimeout: 120
+      TargetCPUPercent: 0
+    StrategyType: execution
+  concurrency: 500
+  environment:
+    name: python
+    namespace: ""
+  functionTimeout: 60
+  idletimeout: 120
+  package:
+    packageref:
+      name: get-bom-name-9e04eb81-13ae-40e6-861a-f6067c8f25ef
+      namespace: ""
+  requestsPerPod: 1
+  resources: {}
