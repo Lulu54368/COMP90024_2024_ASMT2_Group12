@@ -23,7 +23,7 @@ CHUNK_SIZE = 500
 
 file_path_dict = {INDEX_NAME_SUDO : "../data/SUDO-ABS-PopulationDensity/sudo_region.json",
                    INDEX_NAME_BOM : "../data/BOM-Station/suburb_centre_bom.json",
-                   INDEX_NAME_TWITTER : "../data/twitter/tweet.json",
+                   INDEX_NAME_TWITTER : "../data/twitter/suburb_centre.json",
                    INDEX_NAME_MAPS : "../data/SA2-Map/map_data.geojson"}
 
 # Define the mappings for sudo index
@@ -121,7 +121,8 @@ def create_index_bom():
                     "type" : "keyword"
                 },
                 "state" : {
-                    "type" : "text"
+                    "type" : "keyword"
+
                 }
             }
         }
@@ -136,7 +137,7 @@ def create_index_twitter():
         "settings" : {
             "index": {
                 "number_of_shards": 3,
-                "number_of_replicas": 1
+                "number_of_replicas": 2
             }
         },
         "mappings" : {
@@ -162,6 +163,9 @@ def create_index_twitter():
                 "topics" : {
                     "type" : "text",
                     "fielddata" : True
+                },
+                "SA2_NAME21" : {
+                    "type" : "keyword"
                 }
             }
         }
@@ -278,7 +282,7 @@ def insert_data(index_name):
 # print(create_index_bom())
 insert_data(INDEX_NAME_BOM)
 # print(create_index_twitter())
-# insert_data(INDEX_NAME_TWITTER)
+insert_data(INDEX_NAME_TWITTER)
 # print(create_index_mastodon())
 # print(create_index_maps())
 # insert_data(INDEX_NAME_MAPS)
