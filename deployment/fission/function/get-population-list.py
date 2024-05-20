@@ -21,12 +21,10 @@ def main():
             " sa2_maincode_2016",
             " pop_density_2020_people_per_km2"
         ],
+        "size": 1000
     })
     
-    headers = {
-        'Content-Type': 'application/json'
-    }
-
+    headers = {'Content-Type': 'application/json'}
 
     current_app.logger.info(f'Received request: {request.headers}')
     r = requests.get(url, headers=headers, data=payload, verify=False, 

@@ -35,7 +35,8 @@ def main():
             ]
          }
         },
-    "_source": ["Site",  "Start", "End", "Location.lat", "Location.lon"]
+    "_source": ["Site",  "Start", "End", "Location.lat", "Location.lon"],
+    "size": 1000
     })
     
     headers = {

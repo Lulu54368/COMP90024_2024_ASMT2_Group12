@@ -21,6 +21,7 @@ def main():
         payload = {
             "query": {"match_all": {}},
             "_source": ["Name", "SA2_NAME21"],
+            "size": 10000 
         }
 
     headers = {'Content-Type': 'application/json'}

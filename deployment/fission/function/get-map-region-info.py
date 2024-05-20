@@ -23,12 +23,13 @@ def main():
         "aggs": {
             "by_SA2_NAME21": {
                 "terms": {
-                    "field": "SA2_NAME21"
+                    "field": "SA2_NAME21",
+                    "size": 1000
                 },
                 "aggs": {
                     "unique_names_count": {
                         "cardinality": {
-                            "field": "Name"
+                            "field": "Name",
                         }
                     }
                 }
