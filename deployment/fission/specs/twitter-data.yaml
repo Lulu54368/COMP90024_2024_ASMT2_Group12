@@ -63,7 +63,7 @@ data:
         "aggs": {
           "regions": {
             "terms": {
-              "field": "geo"
+              "field": "SA2_NAME21"
             },
             "aggs": {
               "avg_sentiment": {

@@ -15,4 +15,4 @@ def main():
         auth=(config('ES_USERNAME'), config('ES_PASSWORD')),
         json= json.loads(config_twitter('TWITTER_REQ_BODY_AVG_SENTIMENT')))
     current_app.logger.info(f'Status ES request: {r.status_code}')
-    return r.json()["aggregations"]
+    return r.json()['aggregations']
