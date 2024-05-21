@@ -1,3 +1,9 @@
+# Team 12
+# Meilun Yao   1076213
+# Yingyi Luan 1179002
+# Yuntao Lu 1166487
+# Jiayi Xu 1165986
+# Zheyuan Wu 1166034
 HEALTH_URL="'https://elasticsearch-master.elastic.svc.cluster.local/_cluster/health'"
 MASTODON_URL = "'https://elasticsearch-master.elastic.svc.cluster.local:9200/mastodon/_search'"
 MASTODON_COUNT_URL="'https://elasticsearch-master.elastic.svc.cluster.local:9200/mastodon/_count'"

@@ -1,3 +1,10 @@
+# Team 12
+# Meilun Yao   1076213
+# Yingyi Luan 1179002
+# Yuntao Lu 1166487
+# Jiayi Xu 1165986
+# Zheyuan Wu 1166034
+
 # import pandas as pd 
 # rankings_colname = ['data', '1', '2', '3', '4', '5', '6', '7']
 # data = pd.read_csv('./BOM-Station-Origin.csv', names=rankings_colname)

@@ -1,3 +1,9 @@
+# Team 12
+# Meilun Yao   1076213
+# Yingyi Luan 1179002
+# Yuntao Lu 1166487
+# Jiayi Xu 1165986
+# Zheyuan Wu 1166034
 from flask import request, current_app
 import requests
 import json
