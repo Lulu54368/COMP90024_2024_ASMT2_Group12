@@ -202,6 +202,28 @@ GET bom/_search
       }
 ```
 
+
+### Caculate average rate of asthma
+GET asthma/_search
+{
+  "size": 0,
+  "aggs": {
+    "by_suburb": {
+      "terms": {
+        "field": "suburb.keyword","size": 1000},
+      "aggs": {
+        "average_asthma_rate": {
+          "avg": {"field": "asthma_me_2_rate_3_11_7_13" }
+          },
+        "average_respiratory_rate": {
+          "avg": {"field": "respirtry_me_2_rate_3_11_7_13"  }
+        }
+      }
+    }
+  }
+}
+
+
 # Fission function
 
 ```
@@ -225,6 +247,8 @@ fission function create --name get-bom-list --env python --code ./function/get-b
 fission function create --name get-bom-name --env python --code ./function/get-bom-name.py --configmap shared-data
 fission function create --name get-map-region-info --env python --code ./function/get-map-region-info.py --configmap shared-data
 
+fission function create --name get-asthma-avg --env python --code ./function/get-asthma-avg.py --configmap shared-data
+
 
 fission route create  --url /mastodon/gt --function mastodon-gt --name mastodon-gt --createingress
 fission route create  --url /mastodon/lt --function mastodon-lt --name mastodon-lt --createingress
@@ -243,6 +267,8 @@ fission route create  --url /get-map-region-info --function get-map-region-info 
 
 fission fn create --name fetch-epa --code fetch_epa.py --env python --configmap shared-data
 fission timer create --name fetch-epa --function fetch-epa --cron "@every 5m" 
+
+fission route create  --url /get-asthma-avg --function get-asthma-avg --name get-asthma-avg --createingress
 
 kubectl port-forward service/router -n fission 9090:80
 
@@ -283,6 +309,8 @@ http://127.0.0.1:9090/get-population-list //list site and coordinates
 http://127.0.0.1:9090/get-bom-list// aggregate the station in victoria ar different regions
 http://127.0.0.1:9090/get-bom-name // query region name by site
 http://127.0.0.1:9090/get-map-region-info // list regions
+
+http://127.0.0.1:9090/get-asthma-avg // caculate asthma avg rate
 
 ```
 
