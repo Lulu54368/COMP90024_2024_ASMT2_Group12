@@ -144,8 +144,19 @@ fission route create  --url /twitter/count --function twitter-count --name twitt
 fission route create  --url /twitter/lt --function twitter-lt --name twitter-lt --createingress
 fission route create  --url /twitter/gt --function twitter-gt --name twitter-gt --createingress
 fission route create  --url /twitter/sentiment --function twitter-sentiment --name twitter-sentiment --createingress
+
+
+fission fn create --name fetch-epa --code fetch_epa.py --env python --configmap shared-data
+fission timer create --name fetch-epa --function fetch-epa --cron "@every 5m" 
+
 kubectl port-forward service/router -n fission 9090:80
+
+
+
 ```
+
+
+
 
 
 # API for frontend
