@@ -19,12 +19,14 @@ INDEX_NAME_BOM = "bom"
 INDEX_NAME_TWITTER = "twitter"
 INDEX_NAME_MASTODON = "mastodon"
 INDEX_NAME_MAPS = "maps"
+INDEX_NAME_ASTHMA = "asthma"
 CHUNK_SIZE = 500
 
 file_path_dict = {INDEX_NAME_SUDO : "../data/SUDO-ABS-PopulationDensity/sudo_region.json",
                    INDEX_NAME_BOM : "../data/BOM-Station/suburb_centre_bom.json",
                    INDEX_NAME_TWITTER : "../data/twitter/suburb_centre.json",
-                   INDEX_NAME_MAPS : "../data/SA2-Map/map_data.geojson"}
+                   INDEX_NAME_MAPS : "../data/SA2-Map/map_data.geojson",
+                   INDEX_NAME_ASTHMA : "../data/asthma/asthma_edit.json"}
 
 # Define the mappings for sudo index
 def create_index_sudo():
@@ -129,6 +131,44 @@ def create_index_bom():
     }
 
     response = es_client.indices.create(index=INDEX_NAME_BOM, body=index_body)
+    return response
+
+def create_index_asthma():
+    index_body = {
+        "settings" : {
+            "index": {
+                "number_of_shards": 3,
+                "number_of_replicas": 1
+            }
+        },
+        "mappings" : {
+            "properties" : {
+                "id" : {
+                    "type" : "text"
+                },
+                "area_code" : {
+                    "type" : "integer"
+                },
+                "area_name" : {
+                    "type" : "text"
+                },
+                "asthma_me_2_rate_3_11_7_13" : {
+                    "type" : "float"
+                },
+                "respirtry_me_2_rate_3_11_7_13" : {
+                    "type" : "float"
+                },
+                "location" : {
+                    "type" : "geo_point"
+                },
+                "SA2_NAME21" : {
+                    "type" : "keyword"
+                }
+            }
+        }
+    }
+
+    response = es_client.indices.create(index=INDEX_NAME_ASTHMA, body=index_body)
     return response
 
 # Define the mappings for twitter index
@@ -280,9 +320,11 @@ def insert_data(index_name):
 # print(create_index_sudo())
 # insert_data(INDEX_NAME_SUDO)
 # print(create_index_bom())
-insert_data(INDEX_NAME_BOM)
+# insert_data(INDEX_NAME_BOM)
 # print(create_index_twitter())
-insert_data(INDEX_NAME_TWITTER)
+# insert_data(INDEX_NAME_TWITTER)
 # print(create_index_mastodon())
 # print(create_index_maps())
 # insert_data(INDEX_NAME_MAPS)
+# print(create_index_asthma())
+insert_data(INDEX_NAME_ASTHMA)
