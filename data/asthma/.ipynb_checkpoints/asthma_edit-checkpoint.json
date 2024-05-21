@@ -1,0 +1,352 @@
+[
+  {
+    "type": "Feature",
+    "suburb": "Orbost",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 9.80027261205779,
+    "respirtry_me_2_rate_3_11_7_13": 29.8083293144227
+  },
+  {
+    "type": "Feature",
+    "suburb": "Ballarat",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 15.1469191704113,
+    "respirtry_me_2_rate_3_11_7_13": 35.6691543509679
+  },
+  {
+    "type": "Feature",
+    "suburb": "Viewbank - Yallambie",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 11.4112106480675,
+    "respirtry_me_2_rate_3_11_7_13": 33.1287187429134
+  },
+  {
+    "type": "Feature",
+    "suburb": "Wonthaggi - Inverloch",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.6115813201464,
+    "respirtry_me_2_rate_3_11_7_13": 30.029334713622
+  },
+  {
+    "type": "Feature",
+    "suburb": "Benalla",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 14.1107327227663,
+    "respirtry_me_2_rate_3_11_7_13": 31.2955755659699
+  },
+  {
+    "type": "Feature",
+    "suburb": "Camberwell",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 9.45614860154232,
+    "respirtry_me_2_rate_3_11_7_13": 29.4756928181062
+  },
+  {
+    "type": "Feature",
+    "suburb": "St Albans - North",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 8.39618271016507,
+    "respirtry_me_2_rate_3_11_7_13": 24.4812042604525
+  },
+  {
+    "type": "Feature",
+    "suburb": "Buloke",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.776186304944,
+    "respirtry_me_2_rate_3_11_7_13": 32.2018100388649
+  },
+  {
+    "type": "Feature",
+    "suburb": "Koo Wee Rup",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 12.9837654629585,
+    "respirtry_me_2_rate_3_11_7_13": 29.7331854920456
+  },
+  {
+    "type": "Feature",
+    "suburb": "Maryborough Surrounds",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.4400847521984,
+    "respirtry_me_2_rate_3_11_7_13": 30.5101799389118
+  },
+  {
+    "type": "Feature",
+    "suburb": "Colac",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.5967201864259,
+    "respirtry_me_2_rate_3_11_7_13": 34.7980388481971
+  },
+  {
+    "type": "Feature",
+    "suburb": "Camperdown",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.21153417873,
+    "respirtry_me_2_rate_3_11_7_13": 35.1707462395792
+  },
+  {
+    "type": "Feature",
+    "suburb": "Ivanhoe",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 9.71609066893599,
+    "respirtry_me_2_rate_3_11_7_13": 28.8485234923355
+  },
+  {
+    "type": "Feature",
+    "suburb": "Orbost",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.550860689728,
+    "respirtry_me_2_rate_3_11_7_13": 30.5629438233013
+  },
+  {
+    "type": "Feature",
+    "suburb": "Frankston",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 11.5989790864348,
+    "respirtry_me_2_rate_3_11_7_13": 33.3942438847137
+  },
+  {
+    "type": "Feature",
+    "suburb": "Gannawarra",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.7758222891955,
+    "respirtry_me_2_rate_3_11_7_13": 32.2004992556658
+  },
+  {
+    "type": "Feature",
+    "suburb": "Strathfieldsaye",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 14.7445272275129,
+    "respirtry_me_2_rate_3_11_7_13": 34.7365301669964
+  },
+  {
+    "type": "Feature",
+    "suburb": "Keysborough - South",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 8.01153745412685,
+    "respirtry_me_2_rate_3_11_7_13": 27.7440899147839
+  },
+  {
+    "type": "Feature",
+    "suburb": "Geelong",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 12.5367430328315,
+    "respirtry_me_2_rate_3_11_7_13": 30.2771376127853
+  },
+  {
+    "type": "Feature",
+    "suburb": "Shepparton - North",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.2646852379826,
+    "respirtry_me_2_rate_3_11_7_13": 32.9917431125285
+  },
+  {
+    "type": "Feature",
+    "suburb": "Port Melbourne Industrial",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 10.2301644528514,
+    "respirtry_me_2_rate_3_11_7_13": 30.9511001499259
+  },
+  {
+    "type": "Feature",
+    "suburb": "Woodend",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.0833297750767,
+    "respirtry_me_2_rate_3_11_7_13": 30.5040994077213
+  },
+  {
+    "type": "Feature",
+    "suburb": "Ormond - Glen Huntly",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 9.31406974215331,
+    "respirtry_me_2_rate_3_11_7_13": 27.8079674206238
+  },
+  {
+    "type": "Feature",
+    "suburb": "Maribyrnong",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 8.87921043707647,
+    "respirtry_me_2_rate_3_11_7_13": 25.2027521685779
+  },
+  {
+    "type": "Feature",
+    "suburb": "Ringwood East",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 11.5144381320014,
+    "respirtry_me_2_rate_3_11_7_13": 34.0098778446919
+  },
+  {
+    "type": "Feature",
+    "suburb": "Melbourne CBD - East",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 7.77844940983837,
+    "respirtry_me_2_rate_3_11_7_13": 25.5240154277564
+  },
+  {
+    "type": "Feature",
+    "suburb": "Mildura - North",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.94336612881,
+    "respirtry_me_2_rate_3_11_7_13": 30.6030931413389
+  },
+  {
+    "type": "Feature",
+    "suburb": "Corio - Lovely Banks",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.0714527791154,
+    "respirtry_me_2_rate_3_11_7_13": 29.9668154265792
+  },
+  {
+    "type": "Feature",
+    "suburb": "Coburg - West",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 9.43024173156759,
+    "respirtry_me_2_rate_3_11_7_13": 28.9031871765479
+  },
+  {
+    "type": "Feature",
+    "suburb": "Flinders",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 12.1181815023258,
+    "respirtry_me_2_rate_3_11_7_13": 30.7899430161802
+  },
+  {
+    "type": "Feature",
+    "suburb": "Yea",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 12.4971469241178,
+    "respirtry_me_2_rate_3_11_7_13": 30.2704988750209
+  },
+  {
+    "type": "Feature",
+    "suburb": "Panton Hill - St Andrews",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 11.8342753260937,
+    "respirtry_me_2_rate_3_11_7_13": 30.702858770578
+  },
+  {
+    "type": "Feature",
+    "suburb": "St Arnaud",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.9560777165491,
+    "respirtry_me_2_rate_3_11_7_13": 30.8277390881178
+  },
+  {
+    "type": "Feature",
+    "suburb": "Portarlington",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 9.23768916322719,
+    "respirtry_me_2_rate_3_11_7_13": 28.1666389560363
+  },
+  {
+    "type": "Feature",
+    "suburb": "Yarram",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 12.6521733705974,
+    "respirtry_me_2_rate_3_11_7_13": 29.6584291636848
+  },
+  {
+    "type": "Feature",
+    "suburb": "Southern Grampians",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.5975411448922,
+    "respirtry_me_2_rate_3_11_7_13": 31.088681390351
+  },
+  {
+    "type": "Feature",
+    "suburb": "Malvern - Glen Iris",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 8.81475277418459,
+    "respirtry_me_2_rate_3_11_7_13": 28.384211373333
+  },
+  {
+    "type": "Feature",
+    "suburb": "Euroa",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.0057840204167,
+    "respirtry_me_2_rate_3_11_7_13": 30.5925332698953
+  },
+  {
+    "type": "Feature",
+    "suburb": "Lorne - Anglesea",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 12.0145831762475,
+    "respirtry_me_2_rate_3_11_7_13": 30.3377636795973
+  },
+  {
+    "type": "Feature",
+    "suburb": "Swan Hill",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 12.8655145791866,
+    "respirtry_me_2_rate_3_11_7_13": 29.4934710900845
+  },
+  {
+    "type": "Feature",
+    "suburb": "Towong",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 12.7184541704161,
+    "respirtry_me_2_rate_3_11_7_13": 34.3893706935874
+  },
+  {
+    "type": "Feature",
+    "suburb": "Wangaratta",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 13.8621660342065,
+    "respirtry_me_2_rate_3_11_7_13": 31.6077438956225
+  },
+  {
+    "type": "Feature",
+    "suburb": "Warrnambool - South",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 15.1650908406447,
+    "respirtry_me_2_rate_3_11_7_13": 36.7320867041547
+  },
+  {
+    "type": "Feature",
+    "suburb": "West Wimmera",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 12.676256954779,
+    "respirtry_me_2_rate_3_11_7_13": 29.9276612252891
+  },
+  {
+    "type": "Feature",
+    "suburb": "Whittlesea",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 9.77550085388877,
+    "respirtry_me_2_rate_3_11_7_13": 26.470359771787
+  },
+  {
+    "type": "Feature",
+    "suburb": "Wodonga",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 15.2953971934256,
+    "respirtry_me_2_rate_3_11_7_13": 35.6182790190049
+  },
+  {
+    "type": "Feature",
+    "suburb": "Yarra Valley",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 11.829751332603,
+    "respirtry_me_2_rate_3_11_7_13": 30.2810690497568
+  },
+  {
+    "type": "Feature",
+    "suburb": "Yarriambiack",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": 12.6781046308853,
+    "respirtry_me_2_rate_3_11_7_13": 29.9311511375646
+  },
+  {
+    "type": "Feature",
+    "suburb": "Somerville",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": null,
+    "respirtry_me_2_rate_3_11_7_13": null
+  },
+  {
+    "type": "Feature",
+    "suburb": "Wonthaggi - Inverloch",
+    "state": "Victoria",
+    "asthma_me_2_rate_3_11_7_13": null,
+    "respirtry_me_2_rate_3_11_7_13": null
+  }
+]
