@@ -86,3 +86,105 @@ navigate to frontend to run the client
 -- station_vs_twitter.ipynb Scenario 3/4
 
 Run the block from the first to last after starting all the local service
+
+
+
+
+
+## sturcture 
+├── README.md
+├── config
+├── data
+│   ├── BOM-Station
+│   │   ├── BOM-Station-Origin.csv
+│   │   ├── convert.py
+│   │   ├── pre-station.ipynb
+│   │   └── suburb_centre_bom.json
+│   ├── Mastodon
+│   │   ├── mastadonau.ipynb
+│   │   └── mastodon_data.py
+│   ├── README.md
+│   ├── SA2-Map
+│   │   ├── SA2_2021_AUST_GDA2020.dbf
+│   │   ├── SA2_2021_AUST_GDA2020.prj
+│   │   ├── SA2_2021_AUST_GDA2020.shp
+│   │   ├── SA2_2021_AUST_GDA2020.shx
+│   │   ├── SA2_2021_AUST_GDA2020.xml
+│   │   └── convert.py
+│   ├── SUDO-ABS-PopulationDensity
+│   │   ├── abs_regional_population_sa2_2001_2020-4826266136351011880.csv
+│   │   ├── abs_regional_population_sa2_2001_2020-4826266136351011880.json
+│   │   ├── abs_regional_population_sa2_2001_2020-metadata-5317016466857159348.json
+│   │   ├── climateStation.py
+│   │   ├── convert.py
+│   │   ├── sudo.ipynb
+│   │   └── sudo_region.json
+│   ├── asthma
+│   │   ├── asthma.ipynb
+│   │   ├── asthma_edit.json
+│   │   ├── fetch_epa.py
+│   │   └── victoria_data.json
+│   └── twitter
+│       ├── byte_split.py
+│       ├── filtered_tweets.json
+│       ├── final.json
+│       ├── merge_topics.py
+│       ├── suburb_centre.json
+│       ├── tweet.json
+│       └── tweet_process.ipynb
+├── database
+│   ├── README.md
+│   └── elastic.py
+├── deployment
+│   ├── fission
+│   │   ├── README.md
+│   │   ├── function
+│   │   │   ├── coordinate-list.py
+│   │   │   ├── get-asthma-avg.py
+│   │   │   ├── get-bom-list.py
+│   │   │   ├── get-bom-name.py
+│   │   │   ├── get-epa-list.py
+│   │   │   ├── get-map-region-info.py
+│   │   │   ├── get-population-list.py
+│   │   │   ├── mastodon_count.py
+│   │   │   ├── mastodon_gt.py
+│   │   │   ├── mastodon_lt.py
+│   │   │   ├── twitter_count.py
+│   │   │   ├── twitter_gt.py
+│   │   │   ├── twitter_lt.py
+│   │   │   └── twitter_sentiment.py
+│   │   ├── specs
+│   │   │   ├── README
+│   │   │   ├── env-nodejs.yaml
+│   │   │   ├── env-python.yaml
+│   │   │   ├── epa-data.yaml
+│   │   │   ├── fission-deployment-config.yaml
+│   │   │   ├── function-coordinate-list.yaml
+│   │   │   ├── function-get-asthma-avg.yaml
+│   │   │   ├── function-get-bom-list.yaml
+│   │   │   ├── function-get-bom-name.yaml
+│   │   │   ├── function-get-map-region-info.yaml
+│   │   │   ├── function-get-population-list.yaml
+│   │   │   ├── function-mastodon-count.yaml
+│   │   │   ├── mastodon-data.yaml
+│   │   │   ├── shared-data.yaml
+│   │   │   └── twitter-data.yaml
+│   │   ├── test.py
+│   │   └── utils.py
+│   └── kubenetes
+│       └── flask-app.yaml
+├── docs
+│   └── README.md
+├── frontend
+│   ├── README.md
+│   ├── epa.ipynb
+│   ├── mastodon_vs_twitter.ipynb
+│   ├── station_vs_twitter.ipynb
+│   ├── topic_percentage_comparison.png
+│   └── topic_percentage_for_different_sentiment.png
+├── installation
+│   └── README.md
+└── test
+    ├── README.md
+    └── end-to-end.py
+```
