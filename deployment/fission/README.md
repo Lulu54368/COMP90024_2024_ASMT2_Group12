@@ -241,8 +241,17 @@ fission route create  --url /get-bom-list --function get-bom-list --name get-bom
 fission route create  --url /get-bom-name --function get-bom-name --name get-bom-name --createingress
 fission route create  --url /get-map-region-info --function get-map-region-info --name get-map-region-info --createingress
 
+fission fn create --name fetch-epa --code fetch_epa.py --env python --configmap shared-data
+fission timer create --name fetch-epa --function fetch-epa --cron "@every 5m" 
+
 kubectl port-forward service/router -n fission 9090:80
+
+
+
 ```
+
+
+
 
 
 # API for frontend

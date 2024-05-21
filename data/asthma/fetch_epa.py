@@ -12,11 +12,12 @@ def main():
         'Cache-Control': 'no-cache',
         'X-API-Key': 'f6694fb4cb45496a816c8b630e885f92',
     }
+    
     response = requests.get(url, params=params, headers=headers)
     data = json.loads(response.text)
-
+    
     # Step 2: Filter and construct the desired JSON structure
-    filtered_records = []
+    response = []
     for record in data['records']:
         for advice in record.get('siteHealthAdvices', []):
             if advice.get('healthParameter') == 'PM2.5':
@@ -39,5 +40,27 @@ def main():
                                'Content-Type': 'application/json'},
                       verify=False, 
                     auth=(config('ES_USERNAME'), config('ES_PASSWORD')))
+                response.append(r.json())
     
-    return r.json()
+    return response
+
+
+
+
+# Step 2: Filter and update Particle data
+filtered_data = []
+suburb_iter = iter(particle_suburbs)
+
+for record in data['records']:
+    for advice in record.get('siteHealthAdvices', []):
+        if advice.get('healthParameter') == 'Particles':
+            suburb = next(suburb_iter, None)
+            if suburb is None:
+                break
+            filtered_data.append({
+                'averageValue': advice['averageValue'],
+                'suburb': suburb
+            })
+
+# Print the updated JSON data
+print(json.dumps(filtered_data, indent=2))
