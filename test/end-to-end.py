@@ -52,9 +52,21 @@ class TestEnd2End(unittest.TestCase):
         self.assertEqual(test_request.get('/twitter/sentiment').status_code, 200)
         self.assertIsNotNone(test_request.get('/twitter/sentiment').json())
         self.assertGreater(len(test_request.get('/twitter/sentiment').json()), 0)
-
-
-
+        
+    def test_bom(self):
+        self.assertEqual(test_request.get('/get-bom-list').status_code, 200)
+        self.assertIsNotNone(test_request.get('/get-bom-list').text)
+        
+        self.assertEqual(test_request.get('/get-bom-name').status_code, 200)
+        self.assertIsNotNone(test_request.get('/get-bom-name').text)
+        
+    def test_map(self):
+        self.assertEqual(test_request.get('/get-map-region-info').status_code, 200)
+        self.assertIsNotNone(test_request.get('/get-map-region-info').text)
+        
+    def test_population(self):
+        self.assertEqual(test_request.get('/get-population-list').status_code, 200)
+        self.assertIsNotNone(test_request.get('/get-population-list').text)
 
 if __name__ == '__main__':
 
