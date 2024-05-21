@@ -267,6 +267,8 @@ fission route create  --url /get-map-region-info --function get-map-region-info 
 
 fission fn create --name fetch-epa --code fetch_epa.py --env python --configmap shared-data
 fission timer create --name fetch-epa --function fetch-epa --cron "@every 5m" 
+fission fn create --name get-epa --env python --code get-epa-list.py --configmap shared-data
+fission route create --url epa --env python --function get-epa 
 
 fission route create  --url /get-asthma-avg --function get-asthma-avg --name get-asthma-avg --createingress
 
