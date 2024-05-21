@@ -1,5 +1,3 @@
-# COMP90024_2024_ASMT2_Group12
-
 
 # Installation
 
@@ -66,12 +64,3 @@ kubectl get nodes
 
   $ fission function test --name hello --namespace default
   Hello, world!
-
-# How client can run 
-navigate to frontend to run the client
-
--- mastodon_vs_twitter.ipynb Scenario 1/2
-
--- station_vs_twitter.ipynb Scenario 3/4
-
-Run the block from the first to last after starting all the local service
