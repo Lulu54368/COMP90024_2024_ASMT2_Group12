@@ -31,9 +31,7 @@ def main():
                 }
                
                 POST_URL="https://elasticsearch-master.elastic.svc.cluster.local:9200/epa/_doc"    
-                #DUMMY="https://127.0.0.1:9200/epa/_doc" 
-              
-              
+           
                 r = requests.post(POST_URL,
                       data=json.dumps(filtered_record), 
                       headers={'kbn-xsrf': 'reporting',
