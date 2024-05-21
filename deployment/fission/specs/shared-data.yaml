@@ -10,7 +10,7 @@ data:
     "kbn-xsrf": "reporting",
     "Content-Type": "application/json"
     }' 
-  HEALTH_URL: 'https://elasticsearch-master.elastic.svc.cluster.local/_cluster/health'
+  BASE_URL: "https://elasticsearch-master.elastic.svc.cluster.local:9200/"
 
 
 

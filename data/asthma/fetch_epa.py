@@ -1,71 +1,48 @@
 import requests
 import json
-from elasticsearch import Elasticsearch
-from elasticsearch.helpers import bulk
-import urllib3
+""" def config(k):
+    with open(f'/configs/default/shared-data/{k}', 'r') as f:
+        return f.read() """
+def main():
 
-urllib3.disable_warnings()
-
-# Connect to Elasticsearch using username and password
-es_client = Elasticsearch(
-    "https://127.0.0.1:9200/",
-    #api_key = "b9c59b70-88fb-44d5-b00b-ba18f87a3970"
-    verify_certs=False,
-    basic_auth = ("elastic","elastic"))
-
-print(es_client.indices.delete(index='epa', ignore=[400, 404]))
-
-
-index_body = {
-        "settings" : {
-            "index": {
-                "number_of_shards": 3,
-                "number_of_replicas": 1
-            }
-        },
-        "mappings" : {
-            "properties" : {
-                "coordinates" : {
-                    "type" : "geo_point"
-                },
-                "averageValue" : {
-                    "type" : "float"
-                }
-            }
-        }
+    # Step 1: Get data from API
+    url = "https://gateway.api.epa.vic.gov.au/environmentMonitoring/v1/sites"
+    params = {"environmentalSegment": "air"}
+    headers = {
+        'User-agent': 'curl/8.4.0',
+        'Cache-Control': 'no-cache',
+        'X-API-Key': 'f6694fb4cb45496a816c8b630e885f92',
     }
+    response = requests.get(url, params=params, headers=headers)
+    data = json.loads(response.text)
 
-response = es_client.indices.create(index="epa", body=index_body)
-print(response)
-
-# Step 1: Get data from API
-url = "https://gateway.api.epa.vic.gov.au/environmentMonitoring/v1/sites"
-params = {"environmentalSegment": "air"}
-headers = {
-    'User-agent': 'curl/8.4.0',
-    'Cache-Control': 'no-cache',
-    'X-API-Key': 'f6694fb4cb45496a816c8b630e885f92',
-}
-response = requests.get(url, params=params, headers=headers)
-data = json.loads(response.text)
-
-# Step 2: Filter and construct the desired JSON structure
-filtered_records = []
-for record in data['records']:
-    for advice in record.get('siteHealthAdvices', []):
-        if advice.get('healthParameter') == 'PM2.5':
-            coordinates = {}
-            coordinates['lon'] = record['geometry']['coordinates'][1]
-            coordinates['lat'] = record['geometry']['coordinates'][0]
-            filtered_record = {
-                'coordinates': coordinates,
-                'averageValue': advice.get('averageValue')
-            }
-            filtered_records.append(filtered_record)
-            
-success, failed = bulk(es_client, filtered_records, index="epa", raise_on_error=False)
-
-if failed:
-    print("Failed to index documents:")
-    for error in failed:
-        print(error)
+    # Step 2: Filter and construct the desired JSON structure
+    filtered_records = []
+    for record in data['records']:
+        for advice in record.get('siteHealthAdvices', []):
+            if advice.get('healthParameter') == 'PM2.5':
+                coordinates = {}
+                coordinates["lon"] = record["geometry"]["coordinates"][1]
+                coordinates["lat"] = record["geometry"]["coordinates"][0]
+                
+                filtered_record = {
+                    "coordinates": coordinates,
+                    "averageValue": advice.get('averageValue')
+                }
+               
+                POST_URL="https://elasticsearch-master.elastic.svc.cluster.local:9200/epa/_create/_doc"    
+                DUMMY="https://127.0.0.1:9200/epa/_create/_doc" 
+                print(json.dumps(filtered_record))
+                print(filtered_record)
+              
+                r = requests.post(DUMMY,
+                      data=json.dumps(filtered_record), 
+                      headers={'kbn-xsrf': 'reporting',
+                               'Content-Type': 'application/json'},
+                      verify=False, 
+                    auth=('elastic', 'elastic'))
+                print(r.json())
+    #auth=(config('ES_USERNAME'), config('ES_PASSWORD')))
+    
+    return r.json()
+print(main())
