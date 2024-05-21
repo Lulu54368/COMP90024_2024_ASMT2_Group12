@@ -20,6 +20,7 @@ INDEX_NAME_TWITTER = "twitter"
 INDEX_NAME_MASTODON = "mastodon"
 INDEX_NAME_MAPS = "maps"
 INDEX_NAME_ASTHMA = "asthma"
+INDEX_NAME_EPA = "epa"
 CHUNK_SIZE = 500
 
 file_path_dict = {INDEX_NAME_SUDO : "../data/SUDO-ABS-PopulationDensity/sudo_region.json",
@@ -143,32 +144,49 @@ def create_index_asthma():
         },
         "mappings" : {
             "properties" : {
-                "id" : {
+                "type" : {
                     "type" : "text"
                 },
-                "area_code" : {
-                    "type" : "integer"
+                "surburb" : {
+                    "type" : "keyword"
                 },
-                "area_name" : {
-                    "type" : "text"
+                "state" : {
+                    "type" : "keyword"
                 },
                 "asthma_me_2_rate_3_11_7_13" : {
-                    "type" : "float"
+                    "type" : "double"
                 },
                 "respirtry_me_2_rate_3_11_7_13" : {
-                    "type" : "float"
-                },
-                "location" : {
-                    "type" : "geo_point"
-                },
-                "SA2_NAME21" : {
-                    "type" : "keyword"
+                    "type" : "double"
                 }
             }
         }
     }
 
     response = es_client.indices.create(index=INDEX_NAME_ASTHMA, body=index_body)
+    return response
+
+def create_index_epa():
+    index_body = {
+        "settings" : {
+            "index": {
+                "number_of_shards": 3,
+                "number_of_replicas": 1
+            }
+        },
+        "mappings" : {
+            "properties" : {
+                "coordinates" : {
+                    "type" : "geo_point"
+                },
+                "averageValue" : {
+                    "type" : "float"
+                }
+            }
+        }
+    }
+
+    response = es_client.indices.create(index=INDEX_NAME_EPA, body=index_body)
     return response
 
 # Define the mappings for twitter index
@@ -327,4 +345,5 @@ def insert_data(index_name):
 # print(create_index_maps())
 # insert_data(INDEX_NAME_MAPS)
 # print(create_index_asthma())
-insert_data(INDEX_NAME_ASTHMA)
+# insert_data(INDEX_NAME_ASTHMA)
+print(create_index_epa())
