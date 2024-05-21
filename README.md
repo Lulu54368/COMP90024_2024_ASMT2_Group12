@@ -1,11 +1,16 @@
 # COMP90024_2024_ASMT2_Group12
-
+```
 Team12 		  	
 Meilun Yao   1076213
 Yingyi Luan 1179002
 Yuntao Lu 1166487
 Jiayi Xu 1165986
 Zheyuan Wu 1166034
+```
+# introduction
+
+The structure of this project follows the chronological progression. It began by searching and processing various sources from social and data platforms, focusing on finding data with high availability. Particular emphasis was placed on the SUDO and Maston scenarios. Next, we conducted a thorough evaluation of the tools utilized in our project. It also includes a detailed presentation of the system's main features, alongside an overview of its basic design and architecture. 
+
 
 # Installation
 
