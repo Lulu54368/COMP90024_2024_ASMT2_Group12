@@ -41,24 +41,3 @@ def main():
                 response.append(r.json())
     
     return response
-
-
-
-
-# Step 2: Filter and update Particle data
-filtered_data = []
-suburb_iter = iter(particle_suburbs)
-
-for record in data['records']:
-    for advice in record.get('siteHealthAdvices', []):
-        if advice.get('healthParameter') == 'Particles':
-            suburb = next(suburb_iter, None)
-            if suburb is None:
-                break
-            filtered_data.append({
-                'averageValue': advice['averageValue'],
-                'suburb': suburb
-            })
-
-# Print the updated JSON data
-print(json.dumps(filtered_data, indent=2))

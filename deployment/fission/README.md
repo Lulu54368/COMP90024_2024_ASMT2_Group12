@@ -278,6 +278,24 @@ kubectl port-forward service/router -n fission 9090:80
 
 ```
 
+# timer
+```
+fission timer update --name fetch-epa --cron
+ "@every 1h"
+trigger 'fetch-epa' updated
+Current Server Time:    2024-05-21T22:38:42Z
+Next 1 invocation:      2024-05-21T23:38:42Z
+
+
+fission timer list  
+NAME      CRON      FUNCTION_NAME
+fetch-epa @every 6h fetch-epa
+
+fission timer showschedule --cron "@every 1h"
+Current Server Time:    2024-05-21T22:40:19Z
+Next 1 invocation:      2024-05-21T23:40:19Z
+```
+
 
 
 
