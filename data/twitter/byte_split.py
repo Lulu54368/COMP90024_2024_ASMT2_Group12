@@ -1,3 +1,4 @@
+#run in spartan
 import json
 import os
 import datetime
