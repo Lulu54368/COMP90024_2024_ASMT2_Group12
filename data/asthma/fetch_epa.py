@@ -1,10 +1,9 @@
 import requests
 import json
-""" def config(k):
+def config(k):
     with open(f'/configs/default/shared-data/{k}', 'r') as f:
-        return f.read() """
+        return f.read()
 def main():
-
     # Step 1: Get data from API
     url = "https://gateway.api.epa.vic.gov.au/environmentMonitoring/v1/sites"
     params = {"environmentalSegment": "air"}
@@ -30,19 +29,15 @@ def main():
                     "averageValue": advice.get('averageValue')
                 }
                
-                POST_URL="https://elasticsearch-master.elastic.svc.cluster.local:9200/epa/_create/_doc"    
-                DUMMY="https://127.0.0.1:9200/epa/_create/_doc" 
-                print(json.dumps(filtered_record))
-                print(filtered_record)
+                POST_URL="https://elasticsearch-master.elastic.svc.cluster.local:9200/epa/_doc"    
+                #DUMMY="https://127.0.0.1:9200/epa/_doc" 
               
-                r = requests.post(DUMMY,
+              
+                r = requests.post(POST_URL,
                       data=json.dumps(filtered_record), 
                       headers={'kbn-xsrf': 'reporting',
                                'Content-Type': 'application/json'},
                       verify=False, 
-                    auth=('elastic', 'elastic'))
-                print(r.json())
-    #auth=(config('ES_USERNAME'), config('ES_PASSWORD')))
+                    auth=(config('ES_USERNAME'), config('ES_PASSWORD')))
     
     return r.json()
-print(main())
