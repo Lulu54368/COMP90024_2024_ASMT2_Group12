@@ -1,6 +1,0 @@
--- asthma   asthma data
--- BOM-Station  Station data
--- Mastodon   Mastodon data
--- SA2-Map    Shapefile for map display
--- SUDO-ABS-PopulationDensity   population data
--- twitter    twitter data 
